@@ -26,3 +26,7 @@ Mentorados:
 - Danielle Pequito
 - Erika Xavier
 - Geziel Campos
+
+## Pull Requests
+
+Para contribuir com este repositório, siga as instruções em [How to Create Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
