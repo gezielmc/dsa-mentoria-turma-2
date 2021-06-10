@@ -2,6 +2,8 @@
 
 Projeto da Turma 2 da Mentoria do Programa DataScienceAcademy.
 
+Mais detalhes do programa no [Regulamento](https://blog.dsacademy.com.br/programa-de-mentoria-entre-os-alunos-dsa-temporada-2021/).
+
 ## Plano de Trabalho
 
 Atividades previstas:
