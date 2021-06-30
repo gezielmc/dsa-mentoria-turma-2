@@ -7,9 +7,9 @@ Mais detalhes do programa no [Regulamento](https://blog.dsacademy.com.br/program
 ## Plano de Trabalho
 
 Atividades previstas:
-- [ ] Escolha de 1 projeto para trabalho
-- [ ] Divisão entre os participantes
-- [ ] Reuniões quinzenais de alinhamento
+- [X] Escolha de 1 projeto para trabalho
+- [X] Divisão entre os participantes
+- [ ] Reuniões semanais de alinhamento
 - [ ] 1 Sessão Técnica para cada participante
 - [ ] Colocar em Produção na Nuvem ou Servidor local
 - [ ] Publicação no Github e DSA
@@ -29,10 +29,12 @@ Cada mentorado deverá apresentar um tema para o grupo, observando:
   - foi prolixo? conciso?
   - como foi a técnica de apresentação?
 
+As sessões podem ser acompanhadas na [Lista de Sessões](./SESSOES.md).
+
 ## Ritmo do Trabalho
 
 O ritmo de trabalho esperado será de acordo com a disponibilidade exigida para entrar no programa:
-- 30 minutos por dia / 150 min por semana
+- 30 minutos por dia / 2h30m por semana
 - trabalhar nas tarefas
 - reportar constantemente ao mentor o andamento de suas tarefas
 - a conclusão do projeto exige bastante esforço individual e do grupo
@@ -81,7 +83,7 @@ O mentor irá avaliar os mentorados e vice-versa, assim como todos devem avaliar
  
 ## Objetivo do Projeto
  
-Ainda a ser definido.
+Suggeri - Sistema de Recomendação como Serviço com base em Inteligência Artificial.
  
 ## Participantes
  
@@ -89,7 +91,7 @@ Mentoria:
  - [Ronivaldo Sampaio](https://github.com/ronivaldo/)
 
 Mentorados:
-- Dalmiro
+- Dalmiro Esteves
 - Danielle Pequito
 - Erika Xavier
 - Geziel Campos
