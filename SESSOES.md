@@ -4,13 +4,36 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|
---       |-- |-- |
-Danielle | X | X |
-Dalmiro  | X | X |
-Érika    | X | X |
-Geziel   | X | X |
-Ronivaldo| X | X |
+Membro   |S01|S02|S03|
+--       |-- |-- |-- |
+Danielle | X | X | X |
+Dalmiro  | X | X | X |
+Érika    | X | X |   |
+Geziel   | X | X | X |
+Ronivaldo| X | X | X |
+
+
+## S03 - Estudo do Problema
+
+Em 06/07/2021, cada participante mostrou o estudo sobre a sua tarefa.
+
+Definições:
+- Modelo de ML usando _dimensionality reduction_ e módulo _surprise_
+- API usando o Anvil.Works para facilitar
+
+Mostras:
+- Modelo: Danielle
+- Arquitetura da API: Geziel
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Geziel
+- Ronivaldo
 
 
 ## S02 - Definição do Problema
