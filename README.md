@@ -93,7 +93,7 @@ Mentoria:
 Mentorados:
 - Dalmiro Esteves
 - Danielle Pequito
-- Erika Xavier
+- Érica Xavier
 - Geziel Campos
 
 ## Pull Requests
