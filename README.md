@@ -91,10 +91,10 @@ Mentoria:
  - [Ronivaldo Sampaio](https://github.com/ronivaldo/)
 
 Mentorados:
-- Dalmiro Esteves
-- Danielle Pequito
-- Érica Xavier
-- Geziel Campos
+- [Dalmiro Esteves](https://github.com/dalmiroe)
+- [Danielle Pequito](https://github.com/danipequito)
+- [Érica Xavier](https://github.com/ericaxv)
+- [Geziel Campos](https://github.com/gezielmc)
 
 ## Pull Requests
 
