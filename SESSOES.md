@@ -8,7 +8,7 @@ Membro   |S01|S02|S03|
 --       |-- |-- |-- |
 Danielle | X | X | X |
 Dalmiro  | X | X | X |
-Érika    | X | X |   |
+Érica    | X | X |   |
 Geziel   | X | X | X |
 Ronivaldo| X | X | X |
 
@@ -43,7 +43,7 @@ Em 29/06/2021, cada participante mostrou seu entendimento do problema e como pod
 As apresentações estão disponíveis nos arquivo abaixo:
 - [Danielle](../docs/s02_apresentacao_danielle.pdf)
 - [Dalmiro](../docs/s02_apresentacao_dalmiro.pdf)
-- [Érika](../docs/s02_apresentacao_erika.pdf)
+- [Érica](../docs/s02_apresentacao_erica.pdf)
 - [Geziel](../docs/s02_apresentacao_geziel.pdf)
 
 Definições da Infraestrutura:
@@ -55,7 +55,7 @@ Definições da Infraestrutura:
 Divisão de Tarefas:
 - Modelo: Danielle
 - Site: Dalmiro
-- ADM: Erika
+- ADM: Érica
 - Arquitetura da API: Geziel
 
 Atividade para a próxima sessão:
@@ -68,7 +68,7 @@ Ações Futuras:
 Participantes:
 - Danielle
 - Dalmiro
-- Érika
+- Érica
 - Geziel
 - Ronivaldo
 
@@ -80,6 +80,6 @@ Em 15/06/2021, houve a apresentação dos membros do projeto.
 Participantes:
 - Danielle
 - Dalmiro
-- Érika
+- Érica
 - Geziel
 - Ronivaldo
