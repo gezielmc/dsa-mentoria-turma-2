@@ -4,13 +4,48 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|
---       |-- |-- |-- |
-Danielle | X | X | X |
-Dalmiro  | X | X | X |
-Érica    | X | X |   |
-Geziel   | X | X | X |
-Ronivaldo| X | X | X |
+Membro   |S01|S02|S03|S04|
+--       |-- |-- |-- |-- |
+Danielle | X | X | X | X |
+Dalmiro  | X | X | X | X |
+Érica    | X | X |   | X |
+Geziel   | X | X | X | X |
+Ronivaldo| X | X | X | X |
+
+
+## S03 - Definição dos Subsistemas
+
+Em 20/07/2021, cada participante mostrou o estudo sobre a sua tarefa e foram definidos os subsistemas da solução.
+
+Mostras:
+- Modelo: Danielle
+- Arquitetura da API e Server Anvil: Geziel
+- Página ADM e Server Anvil: Erika
+- Site da Empresa: Delmiro
+
+Definições:
+- Dalmiro
+   - Site Suggeri com foco na Solução
+- Erika
+  - Definir as telas da página ADM
+  - Definir o layout do arquivo CSV com base no algoritmo
+- Geziel
+  - Definir uma API dos clientes
+  - Definir uma infraestrutura para treinar e salvar os modelos
+- Danielle
+  - Implementar o Algoritmo de Recomendação
+  - Definir interfaces: treinar, salvar modelo, carregar modelo e predição
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 
 ## S03 - Estudo do Problema
