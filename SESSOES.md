@@ -4,16 +4,49 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|
---       |-- |-- |-- |-- |
-Danielle | X | X | X | X |
-Dalmiro  | X | X | X | X |
-Érica    | X | X |   | X |
-Geziel   | X | X | X | X |
-Ronivaldo| X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|
+--       |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X |
+Dalmiro  | X | X | X | X | X |
+Érica    | X | X |   | X | X |
+Geziel   | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X |
+
+## S05 - Início das Integrações
+
+Em 29/07/2021, cada participante mostrou o estudo sobre a sua tarefa e foram definidos as integrações entre os subsistemas da solução.
+
+Mostras:
+- Modelo: Danielle
+- Arquitetura da API e Server Anvil: Geziel
+- Página ADM e Server Anvil: Erika
+- Site da Empresa: Delmiro
+
+Definições:
+- Dalmiro
+   - Site com Recomendação
+- Erika
+  - Integrar com o backend
+  - Acesso ao Backend de forma assíncrona
+- Geziel
+  - Incorporar o código do treinamento na API e backend
+  - Threads para executar os treinamentos em segundo plano
+- Danielle
+  - Finalizar o treinamento do modelo com o esqueleto definido
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 
-## S03 - Definição dos Subsistemas
+## S04 - Definição dos Subsistemas
 
 Em 20/07/2021, cada participante mostrou o estudo sobre a sua tarefa e foram definidos os subsistemas da solução.
 
