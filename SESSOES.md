@@ -4,13 +4,50 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|S05|
---       |-- |-- |-- |-- |-- |
-Danielle | X | X | X | X | X |
-Dalmiro  | X | X | X | X | X |
-Érica    | X | X |   | X | X |
-Geziel   | X | X | X | X | X |
-Ronivaldo| X | X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|S06|
+--       |-- |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X | X |
+Dalmiro  | X | X | X | X | X | X |
+Érica    | X | X |   | X | X | X |
+Geziel   | X | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X | X |
+
+
+## S06 - Endereçamento das Pendências
+
+Em 05/08/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Modelo: Danielle
+- Arquitetura da API e Server Anvil: Geziel
+- Página ADM e Server Anvil: Erika
+- Site da Empresa: Delmiro
+
+Definições:
+- Dalmiro
+   - Site com Recomendação
+- Erika
+  - Compartilhar código atual através de link do Anvil
+  - Corrigir menu e layout
+- Geziel
+  - Descrever todas as funções do Backend (em formato de UseCase)
+  - Usar http_endpoint para mandar informações do Backend para o Frontend
+- Danielle
+  - Compartilhar código e csvs
+- Ronivaldo
+  - Montar o esqueleto do Modelo
+  - Montar o esqueleto de todos os UseCases do Backend
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 ## S05 - Início das Integrações
 
