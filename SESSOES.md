@@ -4,13 +4,42 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|S05|S06|
---       |-- |-- |-- |-- |-- |-- |
-Danielle | X | X | X | X | X | X |
-Dalmiro  | X | X | X | X | X | X |
-Érica    | X | X |   | X | X | X |
-Geziel   | X | X | X | X | X | X |
-Ronivaldo| X | X | X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|S06|S07|
+--       |-- |-- |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X | X | X |
+Dalmiro  | X | X | X | X | X | X | X |
+Érica    | X | X |   | X | X | X |   |
+Geziel   | X | X | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X | X | X |
+
+
+## S07 - Endereçamento das Pendências
+
+Em 13/08/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Arquitetura da API e Server Anvil: Geziel
+
+Definições:
+- Dalmiro
+   - Finalizar Site com Recomendação
+- Geziel
+  - Unificar os esqueletos do Modelo e Backend para as chamadas do Frontend+API
+  - Criar http_endpoint de testes com retornos fixos
+- Danielle
+  - Testar o código do esqueleto do modeo e enviar csvs
+- Ronivaldo
+  - Tirar dúvidas
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Geziel
+- Ronivaldo
 
 
 ## S06 - Endereçamento das Pendências
