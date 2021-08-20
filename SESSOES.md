@@ -4,13 +4,45 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|S05|S06|S07|
---       |-- |-- |-- |-- |-- |-- |-- |
-Danielle | X | X | X | X | X | X | X |
-Dalmiro  | X | X | X | X | X | X | X |
-Érica    | X | X |   | X | X | X |   |
-Geziel   | X | X | X | X | X | X | X |
-Ronivaldo| X | X | X | X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|S06|S07|S08|
+--       |-- |-- |-- |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X | X | X | X |
+Dalmiro  | X | X | X | X | X | X | X | X |
+Érica    | X | X |   | X | X | X |   | X |
+Geziel   | X | X | X | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X | X | X | X |
+
+
+## S08 - Resolução das Pendências Críticas
+
+Em 19/08/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Arquitetura da API e Server Anvil: Geziel
+- Página do Server Anvil: Erika
+- Site de Testes de Recomendações: Delmiro
+
+Definições:
+- Dalmiro
+   - Desenvolver código do Carroussel mostrando as recomandações de teste
+- Geziel
+  - Unificar os esqueletos do Modelo e Backend para as chamadas do Frontend+API
+  - Criar http_endpoint de testes com retornos fixos
+- Erika
+  - Corrigir link dos menus
+- Ronivaldo
+  - Tirar dúvidas
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Danielle
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 
 ## S07 - Endereçamento das Pendências
