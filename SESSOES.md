@@ -4,14 +4,50 @@ Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|S05|S06|S07|S08|S09|S10|S11|
---       |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
-Danielle | X | X | X | X | X | X | X | X | X | X |   |
-Dalmiro  | X | X | X | X | X | X | X | X | X |   | X |
-Érica    | X | X |   | X | X | X |   | X | X | X | X |
-Geziel   | X | X | X | X | X | X | X | X | X | X | X |
-Ronivaldo| X | X | X | X | X | X | X | X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|S06|S07|S08|S09|S10|S11|S12|
+--       |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X | X | X | X | X | X |   | X |
+Dalmiro  | X | X | X | X | X | X | X | X | X |   | X | X |
+Érica    | X | X |   | X | X | X |   | X | X | X | X | X |
+Geziel   | X | X | X | X | X | X | X | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X | X | X | X | X | X | X | X |
 
+## S12 - Resolução de Problemas Pendentes Críticos
+
+Em 23/09/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Arquitetura da API e Server Anvil: Geziel
+- Página do Server Anvil: Erika
+- Site: Dalmiro
+
+Definições:
+- Geziel
+  - Disponibilizar modelo fixo e treinado
+  - Enviar 3 URLs completas com 3 usuários e produtos
+  - Gerar dataset com poucos dados
+  - Atualizar Notebook base da API
+  - Adicionar try/except na API
+- Erika
+  - Alterar textos explicativos
+  - Alterar select do modelo
+- Ronivaldo
+  - Código cliente da API para várias linguagens
+  - Tirar dúvidas
+  - Vídeo explicativo
+- Dalmiro
+   - Alterar textos
+   - Desenvolver código do Carroussel mostrando as recomendações de teste
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 ## S11 - Resolução de Problemas Pendentes Críticos
 
