@@ -1,4 +1,4 @@
-Guia básico de configuração do Anvil
+# Guia básico de configuração do Anvil
 
 1)	Faça um clone do nosso código fonte para a sua conta, clicando no link abaixo:
 2)	Você deve habilitar o Anvil Uplink. Na barra lateral esquerda, na tela de edição do código, clique no ícone de engrenagem, vá até Uplink e confirue a opção para conectar como Server Code, como no exemplo abaixo:
@@ -16,7 +16,7 @@ Esta será a tua chave que você vai utilizar no python, para criar uma conexão
  
 5)	Se você desejar um caminho mais amigável, é necessário tornar o teu “clone” da nossa aplicação algo público, onde você poderá criar um endereço único para acessar o site da aplicação. Faça isto, vai facilitar sua vida.
 
-Guia básico de instalação no Google Cloud
+# Guia básico de instalação no Google Cloud
 
 1)	Um guia básico e direto pode ser visualizado neste link: https://www.youtube.com/watch?v=5OL7fu2R4M8&list=PLm282P3sC0ge0NNrClpv9i_-BKkKU5zVv&index=1&t=368s
 
@@ -48,7 +48,7 @@ c.	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com su
 
 
 
-Como configurar a API para conectar ao Anvil
+# Como configurar a API para conectar ao Anvil
 
 Se você for executar a aplicação conectada à sua própria instância do Anvil (o que é uma boa ideia), é necessário configurar o arquivo python api_suggeri_cloud.py para a conexão correta.
 Edite este arquivo em um editor de textos puro ou preferencialmente no seu editor python favorito.
