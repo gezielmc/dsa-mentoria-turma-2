@@ -53,15 +53,13 @@ c.	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com su
 Se você for executar a aplicação conectada à sua própria instância do Anvil (o que é uma boa ideia), é necessário configurar o arquivo python api_suggeri_cloud.py para a conexão correta.
 Edite este arquivo em um editor de textos puro ou preferencialmente no seu editor python favorito.
 Na linha 59, você deve informar ao Anvil qual a chave de conexão com a sua instância:
-## para conectar com a versão do front-end
+
 anvil.server.connect("GOV2WLOJBBXX5MY4ZP5PTBXD-QEV7AO4O3G54JYOU")
 
 Nas linhas 319:
-# executa o request para a api de acordo com os parametros
 site = "https://suggeri.anvil.app/_/api/api_treinamento_iniciado/" + modelo_id
 
 E 328:
-# executa o request para a api de acordo com os parametros
 site = "https://suggeri.anvil.app/_/api/api_treinamento_finalizado/" + modelo_id
 
 Você deve substituir o endereço https pelo endereço da API que você configurou no seu servidor Anvil, conforme sugerido no item 5 do nosso “Guia básico de configuração do Anvil”, no início deste documento.
