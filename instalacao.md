@@ -3,14 +3,20 @@
 1)	Faça um clone do nosso código fonte para a sua conta, clicando no link abaixo:
 2)	Você deve habilitar o Anvil Uplink. Na barra lateral esquerda, na tela de edição do código, clique no ícone de engrenagem, vá até Uplink e confirue a opção para conectar como Server Code, como no exemplo abaixo:
 
+![image](https://user-images.githubusercontent.com/56764603/135187747-f738b747-15b7-4d69-a316-fe9743eaff41.png)
+
  
 Esta será a tua chave que você vai utilizar no python, para criar uma conexão entre o Anvil e toda a estrutura de APIs que criamos no python – que farão o treinamento e as predições.
 
 3)	Na barra de navegação lateral, clique em “ServerModule1”:
 
+![image](https://user-images.githubusercontent.com/56764603/135187793-925ba1f2-002f-4be7-b80b-6d0d19de928e.png)
+
  
 
 4)	No rodapé da janela de código, o Anvil irá lhe mostrar qual o caminho para você testar suas APIs, conforme exemplo abaixo:
+
+![image](https://user-images.githubusercontent.com/56764603/135187807-2f208023-e2c3-4203-a23d-e918dd75de0c.png)
 
  
  
