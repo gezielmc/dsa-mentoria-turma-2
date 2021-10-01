@@ -36,7 +36,7 @@ Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil 
 
 3)	Configurando a API
 * Crie um diretório para a aplicação usando o comando:
-i.	“mkdir <nome>”, substituindo <nome> pelo nome que você achar mais interessante.
+'''	“mkdir <nome>”, substituindo <nome> pelo nome que você achar mais interessante.'''
 *	Navegue até o diretório com o comando “cd <nome>”
 *	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 2 arquivos de intalação (requiriments.txt e api_suggeri_cloud.py).
 *	Para instalar, execute:
