@@ -60,7 +60,10 @@ As outros duas são os caminhos que o python vai utilizar para informar ao servi
 
 # Executando tudo junto
  
-Para finalizar todo o processo e fazer sua cópia do Suggeri funcionar, primeiramente, no site do Anvil, com a sua aplicação aberta, aperte no Play para executar:
+Para finalizar todo o processo e fazer sua cópia do Suggeri funcionar, primeiramente, no site do Anvil, com a sua aplicação aberta, aperte no "Run" para executar:
+ 
+ ![image](https://user-images.githubusercontent.com/56764603/135677155-e8593d52-7842-4385-8b00-6f7c1c901e09.png)
+
  
 E na sua instância da VM na GoogleCloud (ou onde você for rodar a API):
 *	Abra o tmux:
