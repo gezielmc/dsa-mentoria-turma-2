@@ -6,7 +6,7 @@
 ![image](https://user-images.githubusercontent.com/56764603/135187747-f738b747-15b7-4d69-a316-fe9743eaff41.png)
 
  
-Esta será a tua chave que você vai utilizar no python, para criar uma conexão entre o Anvil e toda a estrutura de APIs que criamos no python – que farão o treinamento e as predições.
+Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil e toda a estrutura de APIs que criamos no python – e que farão o treinamento e as predições.
 
 3)	Na barra de navegação lateral, clique em “ServerModule1”:
 
@@ -14,13 +14,13 @@ Esta será a tua chave que você vai utilizar no python, para criar uma conexão
 
  
 
-4)	No rodapé da janela de código, o Anvil irá lhe mostrar qual o caminho para você testar suas APIs, conforme exemplo abaixo:
+4)	No rodapé da janela de código, o Anvil irá lhe mostrar qual o caminho para você testar suas APIs, algo como no exemplo abaixo:
 
 ![image](https://user-images.githubusercontent.com/56764603/135187807-2f208023-e2c3-4203-a23d-e918dd75de0c.png)
 
  
  
-5)	Se você desejar um caminho mais amigável, é necessário tornar o teu “clone” da nossa aplicação algo público, onde você poderá criar um endereço único para acessar o site da aplicação. Faça isto, vai facilitar sua vida.
+5)	Se você desejar um caminho mais amigável, é necessário publicar a sua versão da aplicação, onde você poderá criar um endereço único para acessar o site da aplicação. Faça isto, vai facilitar a vida.
 
 # Guia básico de instalação no Google Cloud
 
@@ -54,21 +54,18 @@ c.	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com su
 
 
 
-# Como configurar a API para conectar ao Anvil
+# Como configurar a API Python para conectar ao Anvil
 
-Se você for executar a aplicação conectada à sua própria instância do Anvil (o que é uma boa ideia), é necessário configurar o arquivo python api_suggeri_cloud.py para a conexão correta.
-Edite este arquivo em um editor de textos puro ou preferencialmente no seu editor python favorito.
-Na linha 59, você deve informar ao Anvil qual a chave de conexão com a sua instância:
+Se você for executar a aplicação conectada à sua própria instância do Anvil (o que é uma boa ideia), é necessário configurar o arquivo python config.py para a conexão correta.
+Edite este arquivo em um editor de textos puro ou no seu editor python favorito.
+No arquivo de configurações, você verá algo como o exemplo abaixo:
+ 
+![image](https://user-images.githubusercontent.com/56764603/135675180-9431b34b-cf05-4a69-88d4-7a48fa6e9aa5.png)
 
-anvil.server.connect("GOV2WLOJBBXX5MY4ZP5PTBXD-QEV7AO4O3G54JYOU")
-
-Nas linhas 319:
-site = "https://suggeri.anvil.app/_/api/api_treinamento_iniciado/" + modelo_id
-
-E 328:
-site = "https://suggeri.anvil.app/_/api/api_treinamento_finalizado/" + modelo_id
-
-Você deve substituir o endereço https pelo endereço da API que você configurou no seu servidor Anvil, conforme sugerido no item 5 do nosso “Guia básico de configuração do Anvil”, no início deste documento.
-
+ 
+A variável anvil_server_key deve receber a chave única que você criou no item 2 da seção "Guia básico de configuração do Anvil".
+As outros duas são os caminhos que o python vai utilizar para informar ao servidor Anvil que o treinamento inicou, e no final, que ele terminou. Você irá substituir nas duas variaváveis a parte "https://suggeri.anvil.app/_/api/" pelo caminho que o Anvil criou pra você, conforme item 4 da seção "Guia básico de configuração do Anvil".
+ 
+Parabéns, a sua cópia do Suggeri está pronta!
 
 
