@@ -27,12 +27,12 @@ Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil 
 1)	Um guia básico e direto pode ser visualizado neste link: https://www.youtube.com/watch?v=5OL7fu2R4M8&list=PLm282P3sC0ge0NNrClpv9i_-BKkKU5zVv&index=1&t=368s
 
 2)	Acessar o site cloud.google.com e criar um cadastro com uma conta do google
-a.	Clicar em “Console”
-b.	Ativar as funções de faturamento (inserir dados de cartão de crédito)
-c.	Abrir o link “Compute Engine” e depois em “Instâncias de VM”
-d.	Abrir “Criar Instância” e escolher as configurações mais adequadas (sugestão é utilizar uma máquina com pelo menos 8GbRAM, uma vez que o treinamento exige uma quantidade razoável de RAM. O ideal seriam 16 GB, mas isso tornaria os custos muito altos, porém a ideia é apenas fazer uma prova de conceito. É interessante que de instalação da VM seja região seja São Paulo. Utilizar o disco  de inicialização padrão, e configurar o firewall para permitir tráfego HTTP e HTTPS. 
-e.	Após a criação da VM, conectar usando o ícone de SSH.
-f.	Pronto, a VM já está funcional, os próximos passos são instalar as nossas APIs.
+ a.	Clicar em “Console”
+ b.	Ativar as funções de faturamento (inserir dados de cartão de crédito)
+ c.	Abrir o link “Compute Engine” e depois em “Instâncias de VM”
+ d.	Abrir “Criar Instância” e escolher as configurações mais adequadas (sugestão é utilizar uma máquina com pelo menos 8GbRAM, uma vez que o treinamento exige uma quantidade razoável de RAM. O ideal seriam 16 GB, mas isso tornaria os custos muito altos, porém a ideia é apenas fazer uma prova de conceito. É interessante que de instalação da VM seja região seja São Paulo. Utilizar o disco  de inicialização padrão, e configurar o firewall para permitir tráfego HTTP e HTTPS. 
+ e.	Após a criação da VM, conectar usando o ícone de SSH.
+ f.	Pronto, a VM já está funcional, os próximos passos são instalar as nossas APIs.
 
 3)	Configurando a API
 a.	Crie um diretório para a aplicação usando o comando:
