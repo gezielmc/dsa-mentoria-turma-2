@@ -35,24 +35,13 @@ Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil 
 * Pronto, a VM já está funcional, os próximos passos são instalar as nossas APIs.
 
 3)	Configurando a API
-* Crie um diretório para a aplicação usando o comando:
-```	mkdir <nome>```, substituindo <nome> pelo nome que você achar mais interessante.
-*	Navegue até o diretório com o comando “cd <nome>”
-*	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 2 arquivos de intalação (requiriments.txt e api_suggeri_cloud.py).
+* Crie um diretório para a aplicação usando o comando ```	mkdir <nome>```, substituindo <nome> pelo nome que você achar mais interessante.
+*	Navegue até o diretório com o comando ```cd <nome>```
+*	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 3 arquivos de intalação (requiriments.txt, config.py e api_suggeri_cloud.py).
 *	Para instalar, execute:
-i.	“pip install -r requirements.txt”
-*	Caso a instalação termine com sucesso, agora vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH:
-i.	Execute “sudo apt install tmux”
+```pip install -r requirements.txt```
+*	Após a instalação, vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH: Execute: ```sudo apt install tmux```
 *	A instalação está pronta.
-
-4)	Executando a API
-*	Abra o tmux:
-*	Basta executar o comando “tmux” no terminal do linux
-*	Execute a nossa aplicação:
-*	No terminal do linux, execute “python api_suggeri_cloud.py”
-*	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com sucesso ao servidor Anvil.
-
-
 
 # Como configurar a API Python para conectar ao Anvil
 
@@ -66,6 +55,17 @@ No arquivo de configurações, você verá algo como o exemplo abaixo:
 A variável anvil_server_key deve receber a chave única que você criou no item 2 da seção "Guia básico de configuração do Anvil".
 As outros duas são os caminhos que o python vai utilizar para informar ao servidor Anvil que o treinamento inicou, e no final, que ele terminou. Você irá substituir nas duas variaváveis a parte "https://suggeri.anvil.app/_/api/" pelo caminho que o Anvil criou pra você, conforme item 4 da seção "Guia básico de configuração do Anvil".
  
-Parabéns, a sua cópia do Suggeri está pronta!
 
 
+
+# Executando tudo junto
+ 
+Para finalizar todo o processo e fazer sua cópia do Suggeri funcionar, primeiramente, no site do Anvil, com a sua aplicação aberta, aperte no Play para executar:
+ 
+E na sua instância da VM na GoogleCloud (ou onde você for rodar a API):
+*	Abra o tmux:
+*	Basta executar o comando ```tmux``` no terminal do linux
+*	Execute a nossa aplicação: No terminal do tmux, execute ```python api_suggeri_cloud.py```
+*	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com sucesso ao servidor Anvil.
+
+ Parabéns, a sua cópia do Suggeri está pronta e rodando!
