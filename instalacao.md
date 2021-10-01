@@ -27,30 +27,30 @@ Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil 
 1)	Um guia básico e direto pode ser visualizado neste link: https://www.youtube.com/watch?v=5OL7fu2R4M8&list=PLm282P3sC0ge0NNrClpv9i_-BKkKU5zVv&index=1&t=368s
 
 2)	Acessar o site cloud.google.com e criar um cadastro com uma conta do google
-* a.	Clicar em “Console”
-* b.	Ativar as funções de faturamento (inserir dados de cartão de crédito)
-* c.	Abrir o link “Compute Engine” e depois em “Instâncias de VM”
-* d.	Abrir “Criar Instância” e escolher as configurações mais adequadas (sugestão é utilizar uma máquina com pelo menos 8GbRAM, uma vez que o treinamento exige uma quantidade razoável de RAM. O ideal seriam 16 GB, mas isso tornaria os custos muito altos, porém a ideia é apenas fazer uma prova de conceito. É interessante que de instalação da VM seja região seja São Paulo. Utilizar o disco  de inicialização padrão, e configurar o firewall para permitir tráfego HTTP e HTTPS. 
-* e.	Após a criação da VM, conectar usando o ícone de SSH.
-* f.	Pronto, a VM já está funcional, os próximos passos são instalar as nossas APIs.
+* Clicar em “Console”
+* Ativar as funções de faturamento (inserir dados de cartão de crédito)
+* Abrir o link “Compute Engine” e depois em “Instâncias de VM”
+* Abrir “Criar Instância” e escolher as configurações mais adequadas (sugestão é utilizar uma máquina com pelo menos 8GbRAM, uma vez que o treinamento exige uma quantidade razoável de RAM. O ideal seriam 16 GB, mas isso tornaria os custos muito altos, porém a ideia é apenas fazer uma prova de conceito. É interessante que de instalação da VM seja região seja São Paulo. Utilizar o disco  de inicialização padrão, e configurar o firewall para permitir tráfego HTTP e HTTPS. 
+* Após a criação da VM, conectar usando o ícone de SSH.
+* Pronto, a VM já está funcional, os próximos passos são instalar as nossas APIs.
 
 3)	Configurando a API
-a.	Crie um diretório para a aplicação usando o comando:
+* Crie um diretório para a aplicação usando o comando:
 i.	“mkdir <nome>”, substituindo <nome> pelo nome que você achar mais interessante.
-b.	Navegue até o diretório com o comando “cd <nome>”
-c.	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 2 arquivos de intalação (requiriments.txt e api_suggeri_cloud.py).
-d.	Para instalar, execute:
+*	Navegue até o diretório com o comando “cd <nome>”
+*	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 2 arquivos de intalação (requiriments.txt e api_suggeri_cloud.py).
+*	Para instalar, execute:
 i.	“pip install -r requirements.txt”
-e.	Caso a instalação termine com sucesso, agora vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH:
+*	Caso a instalação termine com sucesso, agora vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH:
 i.	Execute “sudo apt install tmux”
-f.	A instalação está pronta.
+*	A instalação está pronta.
 
 4)	Executando a API
-a.	Abra o tmux:
-i.	Basta executar o comando “tmux” no terminal do linux
-b.	Execute a nossa aplicação:
-i.	No terminal do linux, execute “python api_suggeri_cloud.py”
-c.	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com sucesso ao servidor Anvil.
+*	Abra o tmux:
+*	Basta executar o comando “tmux” no terminal do linux
+*	Execute a nossa aplicação:
+*	No terminal do linux, execute “python api_suggeri_cloud.py”
+*	Pronto! Neste momento, vc irá visualizar que a conexão foi realizada com sucesso ao servidor Anvil.
 
 
 
