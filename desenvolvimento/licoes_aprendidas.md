@@ -6,5 +6,5 @@ Lições aprendidas durante a execução do projeto:
 - O uso de ferramentas online, como o Google Colab, foi um grande facilitador na hora dos testes e troca de conhecimento entre os membros da equipe;
 - Usar técnicas de gerenciamento com base em entregas iterativas e incrementais permitiu que a equipe visulizasse o andamento do projeto à cada semana, aumentando a motivação para a entrega final;
 - No começo do projeto, é muito importante que o mentor tenha iniciativa, pois muitas idéias boas surgem, entretanto pouca coisa é de fato colocado em prática;
-- Cada membro ficou responsável por uma tarefa importante dentro do projeto, desta forma todos tinham a noção que eram essenciais para a equipe como um todos e acabaram contribuinte muito mais dessa forma.
-
+- Cada membro ficou responsável por uma tarefa importante dentro do projeto, desta forma todos tinham a noção que eram essenciais para a equipe como um todos e acabaram contribuinte muito mais dessa forma;
+- A utilização de um sistema de cache dos modelos permitiu melhorar de forma significativa o tempo de resposta da API.

@@ -2,17 +2,19 @@
 
 Suggeri é um sistema de recomendação como serviço usando inteligência artificial.
 
-Você recomenda produtos para seus clientes no seu site? Então a Suggeri é pra você!! Estamos trazendo uma ferramenta inteligente de recomendação de produto com base no que realmente os seus consumidores compram para que você possa vender muito mais!
+Você recomenda produtos para seus clientes no seu site/e-commerce? Então a Suggeri é pra você!! Estamos trazendo uma ferramenta inteligente de recomendação de produto com base no que realmente os seus consumidores compram para que você possa vender muito mais!
 
 Diga adeus às recomendações genéricas e segmentação teórica. No nosso sistema, você simplesmente carrega uma base de dados das vendas reais de sua própria empresa e automaticamente treinamos um modelo de Machine Learning especial para sua empresa.
 
 Assista ao vídeo abaixo para saber mais e confira todos os detalhes no site http://www.suggeri.com.br/.
+
 
 ## Vídeo Explicativo
 
 [![Vídeo Explicativo](https://img.youtube.com/vi/ISAjxbkh82M/0.jpg)](https://www.youtube.com/watch?v=ISAjxbkh82M)
 
 Clique na imagem acima ou acesse o link https://www.youtube.com/watch?v=ISAjxbkh82M
+
 
 ## Infra-estrutura:
 
@@ -27,13 +29,16 @@ Como estamos estruturados:
 - API para receber as chamadas dos sites dos clientes;
 - Servidor na nuvem escalável para treino automático de modelos a partir das bases.
 
+
 ## Experimente
 
 Veja em tempo real o sistema de recomendação funcionando em nosso site na aba [Experimente](http://www.suggeri.com.br/#m-experimente).
 
+
 ## Tutorial
 
-Siga o passo a passo do nosso [Tutorial](http://www.suggeri.com.br/tutorial.html) com uma base de dados de teste e comece agora mesmo a experimentar a melhor ferramenta de recomendação de produto do mercado.
+Baixe o [dataset de exemplo](./data/dataset_test.csv) e siga o passo a passo do nosso [Tutorial](http://www.suggeri.com.br/tutorial.html) para experimentar agora mesmo a melhor ferramenta de recomendação de produto do mercado.
+
 
 ## DSA Mentoria - Turma 2
 
@@ -43,9 +48,11 @@ O [Sumário Executivo](./desenvolvimento/sumario_executivo.md) do projeto conté
 
 Mais detalhes do programa no [Regulamento](https://blog.dsacademy.com.br/programa-de-mentoria-entre-os-alunos-dsa-temporada-2021/).
 
+
 ## Behind the hood
 
 Saiba todos os detalhes de como foi desenvolvido e como executar neste [link](./desenvolvimento).
+
 
 ## Equipe
 
