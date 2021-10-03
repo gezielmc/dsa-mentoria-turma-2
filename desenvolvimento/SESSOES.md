@@ -1,5 +1,11 @@
 # Sessões
 
+As sessões são organizadas pelo Mentor e acontecem semanalmente pelo Meet para o acompanhamento das atividades do projeto.
+
+![](../images/sessoes.jpeg)
+
+## Lista de sessões
+
 Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
