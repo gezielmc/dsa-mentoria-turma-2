@@ -38,7 +38,9 @@ python_api_1  | + python /app/api_suggeri_cloud.py
 python_api_2  | + python /app/api_suggeri_cloud.py
 ```
 
-
 # Instalação do ambiente
 
 Para instalar os ambientes, utilize o guia [instalacao.md](../instalacao.md).
+
+
+![image](../../images/gcp_docker.png)
