@@ -23,11 +23,16 @@ Para o seu funcionamento são utilizados:
 - [Google Cloud](https://cloud.google.com/), serviço de cloud fornecido pela Google
 
 
+## Instalação
+
+Os guias de configuração instalação estão disponíveis no arquivo [instalacao.md](./instalacao.md).
+
+
 ## Dataset
 
 O dataset analisado para definir o conceito do produto Suggeri foi a listagem de avaliações de produtos de beleza da Amazon, disponível publicamente no link https://www.kaggle.com/skillsmuggler/amazon-ratings.
 
-Uma versão reduzida do dataset pode ser encontrado neste repositório no arquivo (dataset_test.csv)[../data/dataset_test.csv].
+Uma versão reduzida do dataset pode ser encontrado neste repositório no arquivo [dataset_test.csv](../data/dataset_test.csv).
 
 
 ## Gerenciamento do Projetos
