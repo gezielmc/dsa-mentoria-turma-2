@@ -26,13 +26,16 @@ O projeto suporta escala horizontal, onde a API pode ser executada em várias in
 O comando para escalar 2 containers python_api é:
 
 ```bash
- docker-compose up --scale python_api=2
+docker-compose up --scale python_api=2
 ```
 
 Como o seguinte resultado:
-```
-Starting python_api_1 ... done
-Starting python_api_2 ... done
+```bash
+Starting servidor_predicao_python_api_1 ... done
+Creating servidor_predicao_python_api_2 ... done
+Attaching to servidor_predicao_python_api_1, servidor_predicao_python_api_2
+python_api_1  | + python /app/api_suggeri_cloud.py
+python_api_2  | + python /app/api_suggeri_cloud.py
 ```
 
 
