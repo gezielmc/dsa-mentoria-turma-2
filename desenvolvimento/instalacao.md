@@ -6,7 +6,10 @@ Aqui estão descritos os guias:
 
 # Guia básico de configuração do Anvil
 
-1)	Faça um clone do nosso código fonte para a sua conta, clicando no link abaixo:
+1)	Faça um clone do nosso código fonte [Suggeri.yaml](./site_adm/app/Suggeri.yaml) para a sua conta, clicando no link abaixo:
+
+![image](../images/import_suggeri.png)
+
 2)	Você deve habilitar o Anvil Uplink. Na barra lateral esquerda, na tela de edição do código, clique no ícone de engrenagem, vá até Uplink e confirue a opção para conectar como Server Code, como no exemplo abaixo:
 
 ![image](https://user-images.githubusercontent.com/56764603/135187747-f738b747-15b7-4d69-a316-fe9743eaff41.png)
@@ -50,6 +53,9 @@ Esta será a chave que você vai utilizar para criar uma conexão entre o Anvil 
 *	Após a instalação, vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH: Execute: ```sudo apt install tmux```
 *	A instalação está pronta.
 
+4) Execução via Docker
+* Acesse o guia de [instalação via Docker](./servidor_predicao/README.md) para mais detalhes.
+
 # Como configurar a API Python para conectar ao Anvil
 
 Se você for executar a aplicação conectada à sua própria instância do Anvil (o que é uma boa ideia), é necessário configurar o arquivo python config.py para a conexão correta.
@@ -61,8 +67,6 @@ No arquivo de configurações, você verá algo como o exemplo abaixo:
  
 A variável anvil_server_key deve receber a chave única que você criou no item 2 da seção "Guia básico de configuração do Anvil".
 As outros duas são os caminhos que o python vai utilizar para informar ao servidor Anvil que o treinamento inicou, e no final, que ele terminou. Você irá substituir nas duas variaváveis a parte "https://suggeri.anvil.app/_/api/" pelo caminho que o Anvil criou pra você, conforme item 4 da seção "Guia básico de configuração do Anvil".
- 
-
 
 
 # Executando tudo junto
