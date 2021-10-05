@@ -47,10 +47,10 @@ Esta será a chave (api key) que você vai utilizar para criar uma conexão entr
 3)	Configurando a API
 * Crie um diretório para a aplicação usando o comando ```	mkdir <nome>```, substituindo <nome> pelo nome que você achar mais interessante.
 *	Navegue até o diretório com o comando ```cd <nome>```
-*	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, onde devem ser enviados os 3 arquivos de intalação (requiriments.txt, config.py e api_suggeri_cloud.py).
+*	A tela do SSH possui um ícone no canto superior direito parecido com uma engrenagem. Clique nele e escolha as opções de fazer upload de arquivo, através do qual devem ser enviados os 3 arquivos de intalação (requiriments.txt, config.py e api_suggeri_cloud.py).
 *	Para instalar, execute:
 ```pip install -r requirements.txt```
-*	Aagora vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você fecha a sua conexão SSH: Execute: ```sudo apt install tmux```
+*	Aagora vamos instalar o tmux, que é um terminal que irá rodar em background mesmo que você feche a conexão SSH: Execute: ```sudo apt install tmux```
 *	A instalação estará pronta.
 
 4) Execução via Docker
@@ -66,7 +66,7 @@ O conteúdo do arquivo é como o exemplo abaixo:
 
  
 A variável anvil_server_key deve receber a chave única que você criou no item 2 da seção "Guia básico de configuração do Anvil".
-As outros duas variáveis são os caminhos que o python vai utilizar para informar ao servidor Anvil que o treinamento iniciou, e ao final, que ele terminou. Você irá substituir nas duas variáveis a parte "https://suggeri.anvil.app/_/api/" pelo caminho que o Anvil criou pra você, conforme item 4 da seção "Guia básico de configuração do Anvil".
+As outrss duas variáveis são os caminhos que o python vai utilizar para informar ao servidor Anvil que o treinamento iniciou, e ao final, que ele terminou. Você irá substituir nas duas variáveis a parte "https://suggeri.anvil.app/_/api/" pelo caminho que o Anvil criou pra você, conforme item 4 da seção "Guia básico de configuração do Anvil".
 
 
 # Executando tudo junto
