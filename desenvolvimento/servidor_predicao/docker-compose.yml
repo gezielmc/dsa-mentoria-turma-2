@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  python_api:
+    environment:
+     - ANVIL_UPLINK_KEY=${ANVIL_UPLINK_KEY}
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - model_data:/app
+
+volumes:
+  model_data:
+  

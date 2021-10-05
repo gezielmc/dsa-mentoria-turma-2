@@ -1,17 +1,104 @@
 # Sessões
 
+As sessões são organizadas pelo Mentor e acontecem semanalmente pelo Meet para o acompanhamento das atividades do projeto.
+
+![](../images/sessoes.jpeg)
+
+## Lista de sessões
+
 Lista de sessões realizadas com os participantes.
 
 Tabela de presença:
 
-Membro   |S01|S02|S03|S04|S05|S06|S07|S08|S09|S10|S11|
---       |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
-Danielle | X | X | X | X | X | X | X | X | X | X |   |
-Dalmiro  | X | X | X | X | X | X | X | X | X |   | X |
-Érica    | X | X |   | X | X | X |   | X | X | X | X |
-Geziel   | X | X | X | X | X | X | X | X | X | X | X |
-Ronivaldo| X | X | X | X | X | X | X | X | X | X | X |
+Membro   |S01|S02|S03|S04|S05|S06|S07|S08|S09|S10|S11|S12|S13|
+--       |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
+Danielle | X | X | X | X | X | X | X | X | X | X |   | X | X |
+Dalmiro  | X | X | X | X | X | X | X | X | X |   | X | X | X |
+Érica    | X | X |   | X | X | X |   | X | X | X | X | X | X |
+Geziel   | X | X | X | X | X | X | X | X | X | X | X | X | X |
+Ronivaldo| X | X | X | X | X | X | X | X | X | X | X | X | X |
 
+## S13 - Preparação para a entrega final
+
+Em 28/09/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Arquitetura da API e Server Anvil: Geziel
+- Página do Server Anvil: Erika
+- Site: Dalmiro
+
+Definições:
+- Geziel
+  - Instalar Docker e Compose na instância do Google Cloud
+  - Implantar o código de Cache
+  - Adicionar try/except na API avisando de quando der erro
+  - Gerar dataset com poucos dados
+  - Atualizar Notebook base da API
+- Ronivaldo
+  - Domínio suggeri.com.br
+  - Enviar para Geziel tutorial de instalação do Docker
+  - Criar Cache para n modelos na memória
+  - Migrar Código para Docker escalável com volume
+  - Parametrizar URL e KEY do Anvil
+  - Tirar dúvidas
+  - Vídeo explicativo
+  - Monitoramento da API por serviço externo
+- Dalmiro
+   - Atualizar URL no javascript
+   - Tutorial: Como treinar e testar um modelo de Recomendação com a Suggeri
+   - Migrar site para suggeri.com.br na Locaweb
+- Danielle
+   - Finalizar Notebook de como chegamos no Suggeri com textos e imagens
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
+
+
+## S12 - Resolução de Problemas Pendentes Críticos
+
+Em 23/09/2021, cada participante mostrou o estudo sobre a sua tarefa e o mentor analisou junto aos membros as pendências de cada subsistema e deu orientações para a solução.
+
+Mostras:
+- Arquitetura da API e Server Anvil: Geziel
+- Página do Server Anvil: Erika
+- Site: Dalmiro
+
+Definições:
+- Geziel
+  - Disponibilizar modelo fixo e treinado
+  - Enviar 3 URLs completas com 3 usuários e produtos
+  - Gerar dataset com poucos dados
+  - Atualizar Notebook base da API
+  - Adicionar try/except na API
+- Erika
+  - Alterar textos explicativos
+  - Alterar select do modelo
+- Ronivaldo
+  - Código cliente da API para várias linguagens
+  - Tirar dúvidas
+  - Vídeo explicativo
+- Dalmiro
+   - Alterar textos
+   - Desenvolver código do Carroussel mostrando as recomendações de teste
+- Danielle
+   - Montar Notebook de como chegamos no Suggeri
+
+Atividade para a próxima sessão:
+- Mentor: suporte de 20 min para dúvidas até a próxima sessão
+- Mentorados: apresentar em 15 min o andamento das tarefas
+
+Participantes:
+- Dalmiro
+- Érika
+- Geziel
+- Ronivaldo
 
 ## S11 - Resolução de Problemas Pendentes Críticos
 

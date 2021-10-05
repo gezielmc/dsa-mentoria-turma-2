@@ -1,0 +1,5 @@
+numpy==1.19.5
+pandas==1.1.5
+anvil-uplink==0.3.40
+surprise==0.1
+requests==2.26.0

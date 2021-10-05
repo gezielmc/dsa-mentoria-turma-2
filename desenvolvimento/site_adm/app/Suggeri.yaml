@@ -1,0 +1,1270 @@
+modules: []
+exported_table_schema:
+- python_name: users
+  client: none
+  server: full
+  name: Users
+  columns:
+    5aGLgbhLZuk=:
+      name: signed_up
+      type: datetime
+      admin_ui: {order: 2, width: 200}
+    Gv75U0Me8qs=:
+      name: enabled
+      type: bool
+      admin_ui: {order: 1, width: 100}
+    U5+EvTY3RMA=:
+      name: last_login
+      type: datetime
+      admin_ui: {order: 4, width: 200}
+    Y7jJ7BH2GsE=:
+      name: password_hash
+      type: string
+      admin_ui: {order: 3, width: 200}
+    v5GoMskOMU0=:
+      name: email
+      type: string
+      admin_ui: {order: 0, width: 200}
+  id: 145494
+- python_name: sugestao_ml
+  client: full
+  server: full
+  name: sugestao_ML
+  columns:
+    LkiPUsjl464=:
+      name: ResultUsuarioProduto
+      type: simpleObject
+      admin_ui: {order: 4, width: 200}
+    NcsbSZtwbwE=:
+      name: ResultUsuario
+      type: simpleObject
+      admin_ui: {order: 3.5, width: 200}
+    vOwqhicWiK8=:
+      name: ResultProduto
+      type: simpleObject
+      admin_ui: {order: 4, width: 200}
+    zmF3RTbwU+c=:
+      name: ModeloId
+      type: string
+      admin_ui: {order: 3, width: 200}
+  id: 144565
+- python_name: suggeri_table
+  client: full
+  server: full
+  name: suggeri_table
+  columns:
+    1_X3kFdJZLw=:
+      name: Usuario
+      type: string
+      admin_ui: {order: 3, width: 200}
+    I7oeK246BiU=:
+      name: Modelo
+      type: string
+      admin_ui: {order: 0, width: 200}
+    nDgAYruZChE=:
+      name: Chave
+      type: string
+      admin_ui: {order: 1, width: 200}
+    v384mxFKHFc=:
+      name: Estado
+      type: string
+      admin_ui: {order: 2, width: 200}
+  id: 142410
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: false}
+  server_config: {user_table: users}
+forms:
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {tooltip: '', background: '#908484', foreground: '#cf1717', border: '',
+      visible: true, role: null, html: '@theme:dashboard.html'}
+    event_bindings: {}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_content
+    layout_properties: {slot: default}
+    event_bindings: {}
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Bem Vindo ao Suggeri, font_size: 32, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: true, background: '#e9e9f1',
+        bold: true, underline: false, icon: ''}
+      name: label_bem_vindo
+      layout_properties: {grid_position: 'UIYJEX,JUHGSN'}
+      event_bindings: {}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1
+      layout_properties: {grid_position: 'UOHHLP,RIIZIB'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: subheading, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Suggeri é uma API que oferece um serviço de recomendação
+          de produtos com base em IA.
+
+
+          ', font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: none,
+        italic: true, background: '', bold: false, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'MPTUXZ,HVKGVC'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Utilize seu e-mail para realizar o cadastro ou login e comece agora mesmo a treinar seus modelos.,
+        font_size: 18, font: '', spacing_above: none, icon_align: left, spacing_below: small,
+        italic: true, background: '', bold: false, underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'LUKCYC,FKGYWG'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#514f4d',
+        visible: true, text: 'Acesse o site para mais informações: ', font_size: 18,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: true,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'DNMRKX,GZAJCZ'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: 'http://www.suggeri.com.br', align: center, tooltip: '',
+        border: '', foreground: '#8877c0', visible: true, text: www.suggeri.com.br,
+        font_size: 18, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+        icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '',
+        bold: false, underline: false, icon: ''}
+      name: link_1
+      layout_properties: {grid_position: 'GGDENU,ZHASKE'}
+      event_bindings: {}
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: 'Menu
+
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#fcfcfc', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {slot: title}
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: column_panel_1
+    layout_properties: {slot: sidebar}
+    event_bindings: {}
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '#413e3e', bold: false, underline: false, icon: 'fa:home'}
+      name: link_home
+      layout_properties: {grid_position: 'KCKERJ,WQVQXL'}
+      event_bindings: {}
+  - type: LinearPanel
+    properties: {}
+    name: linear_panel_1
+    layout_properties: {slot: nav-right}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#050505',
+      visible: true, text: Login, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:user'}
+    name: link_criar_conta
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_criar_conta_click}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#0d0c0c',
+      visible: true, text: Logout, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: link_logout
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_logout_click}
+  code: "\nfrom ._anvil_designer import pagina_1_loginTemplate\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.users\nimport anvil.tables as tables\n\
+    import anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass pagina_1_login(pagina_1_loginTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n    \n\n  def link_criar_conta_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the link is clicked\"\"\"\n    anvil.users.login_with_form(allow_cancel=True,\
+    \ \n                                allow_remembered=True, \n                \
+    \                show_signup_option=True)\n    alert(f\"Usu\xe1rio logado: {anvil.users.get_user()['email']}\"\
+    )\n    open_form('pagina_2_treino')\n    pass\n\n  def link_logout_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    anvil.users.logout()\n    alert(\"Usu\xe1rio deslogado!\")\n    open_form('pagina_1_login')\n\
+    \    pass\n\n \n\n\n\n  \n  \n  \n\n\n\n \n\n"
+  class_name: pagina_1_login
+  id: 2RB3JYBQUJMH3HTOAG5UHOMIGBJRQMSA
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+    event_bindings: {}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{"EBPIXP":20}'}
+    name: column_panel_content
+    layout_properties: {slot: default}
+    event_bindings: {}
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Treinamento do Modelo, font_size: 32, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: true, background: '#e9e9f1',
+        bold: true, underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'NZKLEY,YSVBKV', full_width_row: true}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Faça upload de seu arquivo de Dados para treinar o Modelo,
+        font_size: 20, font: '', spacing_above: medium, icon_align: left, spacing_below: small,
+        italic: true, background: '', bold: false, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'RCIVCT,RVQWDH'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Use o arquivo a seguir para realizar um teste de treinamento,
+        font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: true, background: '', bold: false, underline: false, icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'ROOQNR,EBPIXP'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: 'https://raw.githubusercontent.com/ronivaldo/dsa-mentoria-turma-2/main/data/dataset_test.csv',
+        align: center, tooltip: '', border: '', foreground: '#8877c0', visible: true,
+        text: dataset_teste.csv, font_size: 18, wrap_on: mobile, font: '', col_spacing: none,
+        spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      name: link_1
+      layout_properties: {grid_position: 'KOWFNF,SYULOE'}
+      event_bindings: {}
+      components: []
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1
+      layout_properties: {grid_position: 'XRYAQG,IPZOYP'}
+      event_bindings: {}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WZHVRY":40,"NBBXJV":20}',
+        spacing_below: small, background: '#f3f3f7'}
+      name: card_1
+      layout_properties: {grid_position: 'TZFVES,MCWHHH', slot: card}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Escolha o arquivo (.csv), font_size: 16, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: 'theme:Gray 50', bold: true, underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'PCXOYW,WZHVRY'}
+        event_bindings: {}
+      - type: FileLoader
+        properties:
+          role: null
+          show_state: true
+          align: center
+          tooltip: ''
+          border: ''
+          file_types: null
+          enabled: true
+          files: []
+          foreground: ''
+          visible: true
+          text: '     Upload'
+          font_size: null
+          font: ''
+          spacing_above: small
+          icon_align: left
+          spacing_below: small
+          italic: false
+          file: null
+          background: ''
+          bold: false
+          underline: false
+          multiple: false
+          icon: fa:upload
+        name: file_loader_1
+        layout_properties: {grid_position: 'PCXOYW,NBBXJV'}
+        event_bindings: {change: file_loader_1_change}
+      event_bindings: {}
+    - type: Label
+      properties: {role: text, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '12', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'ZTFUXH,VUVGIF', full_width_row: false}
+      event_bindings: {}
+    - type: Button
+      properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: false, text: '  Treinar Modelo', font_size: 22, font: '',
+        spacing_above: large, icon_align: left, spacing_below: small, italic: false,
+        background: '#d2d2e9', bold: true, underline: false, icon: 'data:image/png;base64,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'}
+      name: button_1
+      layout_properties: {grid_position: 'UWLLOC,NJEQWP', full_width_row: false}
+      event_bindings: {click: button_1_click}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#3a3636'}
+    name: column_panel_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: ABWUCZ,HEQQUL
+      slot: sidebar
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+      name: link_home
+      layout_properties: {grid_position: 'PERIMT,YIHERU'}
+      event_bindings: {click: link_home_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Treinar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_treinar_modelo
+      layout_properties: {grid_position: 'RDYHEF,NULRSV'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Modelo Treinado, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_modelo_treinado
+      layout_properties: {grid_position: 'MZCNVU,GWYJDS'}
+      event_bindings: {click: link_modelo_treinado_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Testar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_testar_modelo
+      layout_properties: {grid_position: 'MDHIYG,FBVVRS'}
+      event_bindings: {click: link_testar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: false, text: Dashboard, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:area-chart'}
+      name: link_dashboard
+      layout_properties: {slot: sidebar, grid_position: 'TWYOUO,HAPOQR'}
+      event_bindings: {click: link_dashboard_click}
+    data_bindings: []
+    event_bindings: {}
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: 'Menu
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy
+    layout_properties: {slot: title}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: Logout, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: link_logout
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_logout_click}
+  code: "from ._anvil_designer import pagina_2_treinoTemplate\nfrom ..pagina_1_login\
+    \ import pagina_1_login\nfrom ..pagina_3_modelo_treinado import pagina_3_modelo_treinado\n\
+    from ..pagina_4_teste import pagina_4_teste\nfrom ..pagina_5_dashboard import\
+    \ pagina_5_dashboard\nfrom anvil import *\nimport anvil.server\nimport anvil.users\n\
+    import anvil.tables as tables\nimport anvil.tables.query as q\nfrom anvil.tables\
+    \ import app_tables\n\n\n\nclass pagina_2_treino(pagina_2_treinoTemplate):\n \
+    \ def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    \n    # Any code you write here will\
+    \ run when the form opens.\n    \n  def file_loader_1_change(self, file, **event_args):\n\
+    \    \"\"\"This method is called when a new file is loaded into this FileLoader\"\
+    \"\"\n    self.file_loader_1.file_types = \"csv/*\"\n    \n    modelo_id = anvil.server.call('get_uuid')\n\
+    \    \n    \n    row_table = app_tables.suggeri_table.add_row(Usuario=anvil.users.get_user()['email'],\n\
+    \                                                Chave=modelo_id,\n          \
+    \                                      Modelo='Modelo 1',\n                  \
+    \                              Estado=\"Aguardando Treinamento\")\n    \n    result\
+    \ = anvil.server.call('get_data', file, modelo_id)\n    \n    self.label_3.text\
+    \ = result\n    \n    open_form('pagina_3_modelo_treinado')\n    \n    #self.label_3.text\
+    \ = \"Clique em treinar modelo!\"\n   \n    pass\n\n  #nao vai usar\n  def button_1_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the button is clicked\"\
+    \"\"\n    alert('Treinando Modelos!')\n    \n    \n    #verificar qual o resultado\
+    \ da fun\xe7\xe3o que treina o modelo\n    \n    \n \n  \n  def link_logout_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    anvil.users.logout()\n    alert(\"Usu\xe1rio deslogado!\")\n    open_form('pagina_1_login')\n\
+    \    pass\n\n\n  def link_home_click(self, **event_args):\n    \"\"\"This method\
+    \ is called when the link is clicked\"\"\"\n    home = pagina_1_login()\n    open_form(home)\n\
+    \    pass\n    \n    \n\n  def link_modelo_treinado_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the link is clicked\"\"\"\n    modelo_treinado\
+    \ = pagina_3_modelo_treinado()\n    open_form(modelo_treinado)\n    pass\n\n \
+    \ def link_testar_modelo_click(self, **event_args):\n    \"\"\"This method is\
+    \ called when the link is clicked\"\"\"\n    teste_modelo = pagina_4_teste()\n\
+    \    open_form(teste_modelo)\n    pass\n\n  def link_dashboard_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the link is clicked\"\"\"\n    dashboard\
+    \ = pagina_5_dashboard()\n    open_form(dashboard)\n    pass\n    \n\n\n#alert(f\"\
+    Usu\xe1rio logado: {anvil.users.get_user()['email']}\")\n"
+  class_name: pagina_2_treino
+  id: IIFGUEEYHAGVBT2IBZAIKF2CC3VWUUMD
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+    event_bindings: {}
+    data_bindings: []
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#3a3636'}
+    name: column_panel_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: ABWUCZ,HEQQUL
+      slot: sidebar
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+      name: link_home
+      layout_properties: {grid_position: 'JVVXES,IGRCMC'}
+      event_bindings: {click: link_home_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Treinar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_treinar_modelo
+      layout_properties: {grid_position: 'YXJSCY,QTAWMB'}
+      event_bindings: {click: link_treinar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Modelo Treinado, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_modelo_treinado
+      layout_properties: {grid_position: 'EZGPHN,FYJUNW'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Testar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_testar_modelo
+      layout_properties: {grid_position: 'MRRFVF,UIJHKA'}
+      event_bindings: {click: link_testar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: false, text: Dashboard, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:area-chart'}
+      name: link_dashboard
+      layout_properties: {grid_position: 'YLAUJJ,YGVDJH'}
+      event_bindings: {click: link_dashboard_click}
+    data_bindings: []
+    event_bindings: {}
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: 'Menu
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {slot: title}
+    event_bindings: {}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Modelos, font_size: 32, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '#e9e9f1',
+      bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {slot: default}
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: medium, col_widths: '{}',
+      spacing_below: small, background: '#f9f5ff'}
+    name: card_1
+    layout_properties: {slot: default}
+    event_bindings: {}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Chave, font_size: null, font: '', spacing_above: none,
+        icon_align: left, spacing_below: none, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'RWTZOX,ULNFTC'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Estado, font_size: null, font: '', spacing_above: none,
+        icon_align: left, spacing_below: none, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'RWTZOX,HIJMFP'}
+      event_bindings: {}
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: medium, spacing_below: small, item_template: pagina_3_modelo_treinado.ItemTemplate3,
+        background: ''}
+      name: repeating_panel_1
+      layout_properties: {slot: default, grid_position: 'AYBOMZ,LOQZAN'}
+      event_bindings: {}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '#171616', visible: true, text: ' Testar Modelos', font_size: 16,
+      font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false,
+      background: '#8c8c8c', bold: true, underline: false, icon: 'fa:check'}
+    name: button_testar_modelo
+    layout_properties: {slot: default}
+    event_bindings: {click: button_testar_modelo_click}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: Logout, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: link_logout
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_logout_click}
+  - type: Timer
+    properties: {interval: 10}
+    name: timer_1
+    event_bindings: {tick: timer_1_tick}
+  code: "from ._anvil_designer import pagina_3_modelo_treinadoTemplate\nfrom ..pagina_1_login\
+    \ import pagina_1_login\nfrom ..pagina_4_teste import pagina_4_teste\nfrom ..pagina_5_dashboard\
+    \ import pagina_5_dashboard\nfrom anvil import *\nimport anvil.server\nimport\
+    \ anvil.users\nimport anvil.tables as tables\nimport anvil.tables.query as q\n\
+    from anvil.tables import app_tables\n\nclass pagina_3_modelo_treinado(pagina_3_modelo_treinadoTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n    self.modelo_treinado()\n    \n    self.set_event_handler('x-refresh',\
+    \ self.modelo_treinado)\n   \n\n  def modelo_treinado(self, **event_args):\n \
+    \    self.repeating_panel_1.items = app_tables.suggeri_table.search(Usuario=anvil.users.get_user()['email'])\n\
+    \     pass\n\n  def button_refresh_click(self, **event_args):\n    \"\"\"This\
+    \ method is called when the button is clicked\"\"\"\n    get_open_form().raise_event('x-refresh')\n\
+    \    pass\n\n  def link_logout_click(self, **event_args):\n    \"\"\"This method\
+    \ is called when the link is clicked\"\"\"\n    anvil.users.logout()\n    alert(\"\
+    Usu\xe1rio deslogado!\")\n    open_form('pagina_1_login')\n    pass\n  \n  \n\n\
+    \  def link_home_click(self, **event_args):\n    \"\"\"This method is called when\
+    \ the link is clicked\"\"\"\n    home = pagina_1_login()\n    open_form(home)\n\
+    \    pass\n\n  def link_treinar_modelo_click(self, **event_args):\n    \"\"\"\
+    This method is called when the link is clicked\"\"\"\n    from ..pagina_2_treino\
+    \ import pagina_2_treino\n    treino_modelo = pagina_2_treino()\n    open_form(treino_modelo)\n\
+    \    pass\n\n  def link_testar_modelo_click(self, **event_args):\n    \"\"\"This\
+    \ method is called when the link is clicked\"\"\"\n    from ..pagina_4_teste import\
+    \ pagina_4_teste\n    teste_modelo = pagina_4_teste()\n    open_form(teste_modelo)\n\
+    \    pass\n\n  def link_dashboard_click(self, **event_args):\n    \"\"\"This method\
+    \ is called when the link is clicked\"\"\"\n    dashboard = pagina_5_dashboard()\n\
+    \    open_form(dashboard)\n    pass\n    \n\n  def timer_1_tick(self, **event_args):\n\
+    \    \"\"\"This method is called Every [interval] seconds. Does not trigger if\
+    \ [interval] is 0.\"\"\"\n    get_open_form().raise_event('x-refresh')\n    \n\
+    \n  def button_testar_modelo_click(self, **event_args):\n    \"\"\"This method\
+    \ is called when the button is clicked\"\"\"\n    from ..pagina_4_teste import\
+    \ pagina_4_teste\n    teste_modelo = pagina_4_teste()\n    open_form(teste_modelo)\n\
+    \    pass\n\n\n\n \n\n\n  \n\n\n\n  \n\n\n"
+  class_name: pagina_3_modelo_treinado
+  id: ONEJDOENHHBVLNZ26SX6KO4OD2PWEQS3
+- container:
+    type: ColumnPanel
+    event_bindings: {}
+    properties: {col_widths: '{"YIDGCX":25,"SVFBPQ":30,"ITLXEZ":25}'}
+  components:
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {grid_position: 'YDJOTH,YIDGCX'}
+    event_bindings: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''Modelo'']'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'YDJOTH,SVFBPQ'}
+    event_bindings: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''Estado'']'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'TESTAR
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'YDJOTH,ITLXEZ'}
+    event_bindings: {}
+  is_package: true
+  item_type: {table_id: 142410}
+  code: "from ._anvil_designer import ItemTemplate2Template\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass ItemTemplate2(ItemTemplate2Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens."
+  class_name: pagina_3_modelo_treinado.ItemTemplate2
+  id: 32XVAPS3GNBEWDSMHORNAQJZZRQFFQ7J
+- container:
+    type: ColumnPanel
+    event_bindings: {}
+    properties: {col_widths: '{}'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: 'True', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'PKPUGB,CSZYTY'}
+    event_bindings: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''Chave'']'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'PKPUGB,YEPQUY'}
+    event_bindings: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''Estado'']'}
+  is_package: true
+  item_type: {table_id: 142410}
+  code: "from ._anvil_designer import ItemTemplate3Template\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass ItemTemplate3(ItemTemplate3Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n  def button_1_click(self, **event_args):\n    \"\
+    \"\"This method is called when the button is clicked\"\"\"\n    pass\n\n\n \n\n"
+  class_name: pagina_3_modelo_treinado.ItemTemplate3
+  id: KLPCHH52X5BUB4DSLAU7GYJME5XUQH55
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+    event_bindings: {}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#3a3636'}
+    name: column_panel_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: ABWUCZ,HEQQUL
+      slot: sidebar
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+      name: link_home
+      layout_properties: {grid_position: 'VMSAOF,GBIMCB'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Treinar modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_treinar_modelo
+      layout_properties: {grid_position: 'FZAHEN,XZISBA'}
+      event_bindings: {click: link_treinar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Modelo Treinado, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_modelo_treinado
+      layout_properties: {grid_position: 'PHMAOT,WZNWKY'}
+      event_bindings: {click: link_modelo_treinado_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Testar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_testar_modelo
+      layout_properties: {grid_position: 'XVUUUK,LEGVIX'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: false, text: Dashboard, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:area-chart'}
+      name: link_dashboard
+      layout_properties: {grid_position: 'NHYAZX,SZYQYB'}
+      event_bindings: {click: link_dashboard_click}
+    data_bindings: []
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"SWPIDO":35,"GBOVTG":20,"UVOVPQ":35}'}
+    name: card_1
+    layout_properties: {grid_position: 'OONMFS,LQZBJX'}
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Teste de Modelos, font_size: 32, font: '', spacing_above: none,
+        icon_align: left, spacing_below: medium, italic: true, background: '#e9e9f1',
+        bold: true, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'YZZGAR,PXKLOA'}
+      event_bindings: {}
+    - type: DropDown
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: Escolha o Modelo
+        border: ''
+        enabled: true
+        foreground: ''
+        items: []
+        visible: true
+        font_size: 16
+        font: ''
+        spacing_above: small
+        spacing_below: medium
+        italic: false
+        background: ''
+        bold: false
+        underline: false
+        include_placeholder: true
+      name: drop_down_modelo
+      layout_properties: {grid_position: 'EXTMAV,YCVKGN'}
+      event_bindings: {change: drop_down_modelo_change}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Caso tenha utilizado o dataset_teste.csv para treinar
+          o modelo, teste com usuário id A1BW4LQY9U32PC  e/ou produto id 535795531X.',
+        font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: medium,
+        italic: false, background: '', bold: true, underline: false, icon: ''}
+      name: label_id_teste
+      layout_properties: {grid_position: 'DPVWNA,KVKPBM'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Digite o Id do Usuário, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'FOWKYK,VIBSAB'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Digite o Id do Produto, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'FOWKYK,JDDGWL'}
+      event_bindings: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_usuarioId
+      layout_properties: {grid_position: 'OXXPPZ,SWPIDO'}
+      event_bindings: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_produtoId
+      layout_properties: {grid_position: 'OXXPPZ,UVOVPQ'}
+      event_bindings: {}
+    - type: Button
+      properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: RECOMENDAR, font_size: null, font: '',
+        spacing_above: medium, icon_align: left, spacing_below: small, italic: false,
+        background: '#ddd9f2', bold: true, underline: false, icon: ''}
+      name: button_sugerir
+      layout_properties:
+        col_widths: {}
+        grid_position: TFEFKL,GBOVTG
+      event_bindings: {click: button_sugerir_click}
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"TFPVAX":15}'}
+    name: card_6
+    layout_properties: {slot: default}
+    event_bindings: {}
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Sugestão Usuário, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_retorno
+      layout_properties: {grid_position: 'RCNDRX,TFPVAX'}
+      event_bindings: {}
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: small, spacing_below: small, item_template: pagina_4_teste.ItemTemplate1,
+        background: ''}
+      name: repeating_panel_return
+      layout_properties: {grid_position: 'EBYXRM,BVCXET'}
+      event_bindings: {}
+      data_bindings: []
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: 'Menu
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy
+    layout_properties: {slot: title}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: Logout, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: link_logout
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_logout_click}
+  code: "from ._anvil_designer import pagina_4_testeTemplate\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass pagina_4_teste(pagina_4_testeTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    \n    self.drop_down_modelo.items\
+    \ = [(r['Chave'],r) for r in app_tables.suggeri_table.search(Usuario=anvil.users.get_user()['email'])]\n\
+    \    \n    self.button_sugerir.enabled = False\n    self.label_id_teste.visible\
+    \ = False\n    # Any code you write here will run when the form opens.\n    \n\
+    \  def drop_down_modelo_change(self, **event_args):\n    \"\"\"This method is\
+    \ called when an item is selected\"\"\"\n    modelo_id = self.drop_down_modelo.selected_value['Chave']\n\
+    \    #alert('Modelo Selecionado: ' + modelo_id + '\\nDigite o Id do Usu\xe1rio\
+    \ ou Id do Produto')\n    self.button_sugerir.enabled = True\n    self.label_id_teste.visible\
+    \ = True\n    pass\n    \n  \n  def button_sugerir_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the button is clicked\"\"\"  \n    \n  \
+    \  modelo_id = self.drop_down_modelo.selected_value['Chave']\n    product_id =\
+    \ self.text_box_produtoId.text\n    usuario_id = self.text_box_usuarioId.text\n\
+    \      \n    \n    if usuario_id != '' and product_id == '': \n      self.label_retorno.text\
+    \ = 'Items'\n      self.repeating_panel_return.items = anvil.server.call('api_predict_item',modelo_id,\
+    \ usuario_id)  \n    elif usuario_id == '' and product_id != '':\n      self.label_retorno.text\
+    \ = 'Usu\xe1rios' \n      self.repeating_panel_return.items = anvil.server.call('API_predict_users',\
+    \ modelo_id, product_id)  \n    elif usuario_id != '' and product_id != '':\n\
+    \      self.label_retorno.text = 'Nota de Avalia\xe7\xe3o'\n      self.repeating_panel_return.items\
+    \ = anvil.server.call('api_predict_user_item', modelo_id, usuario_id, product_id)\
+    \ \n    else:\n      alert('Favor preencher Id do Usu\xe1rio ou Id do Produto')\n\
+    \   \n   \n    pass\n      \n \n  def link_logout_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the link is clicked\"\"\"\n    anvil.users.logout()\n\
+    \    alert(\"Usu\xe1rio deslogado!\")\n    open_form('pagina_1_login')\n    pass\n\
+    \   \n    \n  def link_home_click(self, **event_args):\n    \"\"\"This method\
+    \ is called when the link is clicked\"\"\"\n    from ..pagina_1_login import pagina_1_login\n\
+    \    home = pagina_1_login()\n    open_form(home)\n    pass\n\n  def link_treinar_modelo_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    from ..pagina_2_treino import pagina_2_treino\n    treino_modelo = pagina_2_treino()\n\
+    \    open_form(treino_modelo)\n    pass\n\n  def link_modelo_treinado_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    from ..pagina_3_modelo_treinado import pagina_3_modelo_treinado\n    modelo_treinado\
+    \ = pagina_3_modelo_treinado()\n    open_form(modelo_treinado)\n    pass\n\n \
+    \ def link_dashboard_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the link is clicked\"\"\"\n    from ..pagina_5_dashboard import pagina_5_dashboard\n\
+    \    navigation_dashboard = pagina_5_dashboard()\n    open_form(navigation_dashboard)\n\
+    \    pass\n    \n\n \n\n\n  \n\n\n\n \n\n\n \n\n\n  \n \n\n\n\n\n  \n  \n\n\n\
+    \ \n\n\n\n\n\n  \n\n\n \n\n\n\n"
+  class_name: pagina_4_teste
+  id: 2RMPYTCY3C56VJHICFEADEH3OPUPGNA2
+- container:
+    type: ColumnPanel
+    event_bindings: {}
+    properties: {col_widths: '{}'}
+  components:
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_pagina_teste
+    layout_properties: {grid_position: 'UKEHQQ,VEPSWL'}
+    event_bindings: {}
+  is_package: true
+  item_type: {table_id: 144565}
+  code: "from ._anvil_designer import ItemTemplate1Template\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass ItemTemplate1(ItemTemplate1Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    \n    self.label_pagina_teste.text\
+    \ = self.item\n\n    # Any code you write here will run when the form opens."
+  class_name: pagina_4_teste.ItemTemplate1
+  id: 2XM77TFAOGZZYICEEA4C7ORCAR6I6RYE
+- container:
+    type: ColumnPanel
+    event_bindings: {}
+  components: []
+  is_package: true
+  item_type: {table_id: null}
+  code: "from ._anvil_designer import ItemTemplate4Template\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass ItemTemplate4(ItemTemplate4Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens."
+  class_name: pagina_4_teste.ItemTemplate4
+  id: VBU5MU546OEOA2MHZHCMIPMXWX5X7NUR
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+    event_bindings: {}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#3a3636'}
+    name: column_panel_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: ABWUCZ,HEQQUL
+      slot: sidebar
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+      name: link_home
+      layout_properties: {grid_position: 'XXMXEZ,PWICEJ'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Treinar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_treinar_modelo
+      layout_properties: {grid_position: 'RXLQWG,ERLEOT'}
+      event_bindings: {click: link_treinar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Modelo Treinado, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_modelo_treinado
+      layout_properties: {grid_position: 'JAQEYA,BFYUNW'}
+      event_bindings: {}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Testar Modelo, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_testar_modelo
+      layout_properties: {grid_position: 'XRSUOF,PLZQDD'}
+      event_bindings: {click: link_testar_modelo_click}
+    - type: Link
+      properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Dashboard, font_size: 14, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:area-chart'}
+      name: link_dashboard
+      layout_properties: {grid_position: 'SKDGZR,GAUMLJ'}
+      event_bindings: {}
+    data_bindings: []
+    event_bindings: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Dashboard, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {slot: default}
+    event_bindings: {}
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: 'Menu
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {slot: title}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#1f1e1e',
+      visible: true, text: Logout, font_size: 14, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: link_logout
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_logout_click}
+  code: "from ._anvil_designer import pagina_5_dashboardTemplate\nfrom anvil import\
+    \ *\nimport anvil.server\nimport plotly.graph_objects as go\nimport anvil.users\n\
+    import anvil.tables as tables\nimport anvil.tables.query as q\nfrom anvil.tables\
+    \ import app_tables\n\nclass pagina_5_dashboard(pagina_5_dashboardTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n    \n  def link_logout_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the link is clicked\"\"\"\n    anvil.users.logout()\n\
+    \    alert(\"Usu\xe1rio deslogado!\")\n    open_form('pagina_1_login')\n    pass\n\
+    \    \n  def link_home_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the link is clicked\"\"\"\n    from ..pagina_1_login import pagina_1_login\n\
+    \    home = pagina_1_login()\n    open_form(home)\n    pass\n\n  def link_treinar_modelo_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    from ..pagina_2_treino import pagina_2_treino\n    treino_modelo = pagina_2_treino()\n\
+    \    open_form(treino_modelo)\n    pass\n\n  def link_modelo_treinado_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the link is clicked\"\"\
+    \"\n    from ..pagina_3_modelo_treinado import pagina_3_modelo_treinado\n    modelo_treinado\
+    \ = pagina_3_modelo_treinado()\n    open_form(modelo_treinado)\n    pass\n\n \
+    \ def link_testar_modelo_click(self, **event_args):\n    \"\"\"This method is\
+    \ called when the link is clicked\"\"\"\n    from ..pagina_4_teste import pagina_4_teste\n\
+    \    modelo_teste = pagina_4_teste()\n    open_form(modelo_teste)\n    pass\n\n\
+    \n  "
+  class_name: pagina_5_dashboard
+  id: 4Q4QWZY2ZO4SS3WJPA2MCLJFXDO5USVA
+startup: {type: form, module: pagina_1_login}
+package_name: Suggeri
+allow_embedding: false
+name: Suggeri
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {}
+db_schema:
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {width: 100}
+      type: bool
+    - name: signed_up
+      admin_ui: {width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {width: 200}
+      type: string
+    - name: last_login
+      admin_ui: {width: 200}
+      type: datetime
+  sugestao_ml:
+    title: sugestao_ML
+    client: full
+    server: full
+    columns:
+    - name: ModeloId
+      admin_ui: {width: 200}
+      type: string
+    - name: ResultUsuario
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: ResultUsuarioProduto
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: ResultProduto
+      admin_ui: {width: 200}
+      type: simpleObject
+  suggeri_table:
+    title: suggeri_table
+    client: full
+    server: full
+    columns:
+    - name: Modelo
+      admin_ui: {width: 200}
+      type: string
+    - name: Chave
+      admin_ui: {width: 200}
+      type: string
+    - name: Estado
+      admin_ui: {width: 200}
+      type: string
+    - name: Usuario
+      admin_ui: {width: 200}
+      type: string
+dependency_order: []
+dependency_code: {}
+theme:
+  templates:
+  - name: Card-based layout with sidebar
+    description: A page with a card-based layout, and a sidebar menu for links
+    img: img/form-templates/dashboard.png
+    form:
+      class_name: Form
+      is_package: true
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:dashboard.html'}
+      components:
+      - type: ColumnPanel
+        properties: {}
+        name: content_panel
+        layout_properties: {slot: default}
+      code: "from ._anvil_designer import $NAME$Template\nfrom anvil import *\n\n\
+        class $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n   \
+        \ # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run when the form opens.\n    \n"
+  - name: Single-column layout
+    description: A page with a single-column layout and a large header
+    img: img/form-templates/material-single-column.png
+    form:
+      class_name: Form
+      is_package: true
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:single-column.html'}
+      components:
+      - type: ColumnPanel
+        properties: {}
+        name: content_panel
+        layout_properties: {slot: default}
+      code: "from ._anvil_designer import $NAME$Template\nfrom anvil import *\n\n\
+        class $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n   \
+        \ # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run when the form opens.\n"
+  parameters:
+    roles:
+    - name: title
+      components: [Label]
+    - name: card
+      components: [ColumnPanel]
+      display_in_toolbox: true
+      title: Card
+  assets:
+  - {name: dashboard.html, content: PCEtLTxsaW5rIGhyZWY9Il8vdGhlbWUvZGFzaGJvYXJkLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ij4tLT4KPHN0eWxlPgouc2lkZWJhciB7CiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzOwogICAgY29sb3I6IHdoaXRlOwogICAgcGFkZGluZzogMTBweCAwOwogICAgZmxleC1zaHJpbms6IDA7CgogICAgb3ZlcmZsb3cteTogYXV0bzsKICAgIG92ZXJmbG93LXg6IGhpZGRlbjsKfQoKLnNpZGViYXIgLnBsYWNlaG9sZGVyIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKfQoKLnNpZGViYXItZWx0OjpmaXJzdCB7CiAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzg4ODsKfQoKLnNpZGViYXItZWx0IHsKICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjODg4Owp9Cgouc2lkZWJhci1lbHQgLmRyb3AtaGVyZSB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB0b3A6IC04cHg7CiAgICBsZWZ0OiAwOwogICAgcmlnaHQ6IDA7CiAgICBoZWlnaHQ6IDVweDsKfQoKLnNpZGViYXItZWx0Pi5jb250ZW50IGEgewpmb250LXNpemU6IDE2cHg7CmNvbG9yOndoaXRlOwp0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwp9Cgouc2lkZWJhci1lbHQ+LmNvbnRlbnQgYTpob3ZlciB7CmJhY2tncm91bmQ6ICM0NDQ7Cn0KCi5zaWRlYmFyLWVsdCAuY29udGVudCBhLmFudmlsLWNvbXBvbmVudCB7CiAgICBwYWRkaW5nLWxlZnQ6IDE0cHg7CiAgICBwYWRkaW5nLXJpZ2h0OiAxNHB4Owp9Cgouc2lkZWJhci1lbHQgYSB7CiAgICBjb2xvcjogI2RkZDsKfQoKLnNpZGViYXItZWx0IGE6aG92ZXIsIC5zaWRlYmFyLWVsdCBhOmFjdGl2ZSB7CiAgICBjb2xvcjogd2hpdGU7Cn0KCi8qIFJlc3BvbnNpdmUgYml0czogTWFrZSB0aGUgbWVudSBvdmVybGF5IHRoZSBzY3JlZW4KICAgKGFuZCBoaWRkZW4gYnkgZGVmYXVsdCkgcmF0aGVyIHRoYW4gZGlzcGxhY2luZyBpdAogICBvbiBzbWFsbCBzY3JlZW5zCiovCgouc2lkZWJhci5mbG9hdGluZyB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB0b3A6IDYycHg7CiAgICBib3R0b206IDBweDsKICAgIGxlZnQ6IDBweDsKICAgIHotaW5kZXg6IDI7Cn0KCkBtZWRpYShtYXgtd2lkdGg6NzY3cHgpIHsKICAgIC5ydW5uZXIgLnNpZGViYXIgewogICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgcG9zaXRpb246IGFic29sdXRlOwogICAgICAgIHRvcDogNjJweDsKICAgICAgICBib3R0b206IDBweDsKICAgICAgICBsZWZ0OiAwcHg7CiAgICAgICAgei1pbmRleDogMTI7CiAgICB9CgogICAgLnJ1bm5lciAuc2lkZWJhci1jbGljay1ndWFyZCB7CiAgICAgICAgZGlzcGxheTogbm9uZTsKICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICAgICAgdG9wOiA2MnB4OwogICAgICAgIGJvdHRvbTogMHB4OwogICAgICAgIGxlZnQ6IDA7CiAgICAgICAgcmlnaHQ6IDA7CiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzg4ODsKICAgICAgICBvcGFjaXR5OiAwLjU7CiAgICAgICAgei1pbmRleDogMTA7CiAgICB9CgogICAgLmRlc2lnbmVyIC5zaWRlYmFyIHsKICAgICAgICBtYXgtd2lkdGg6IDMwJTsKICAgIH0KCiAgICAuc2lkZWJhci5mbG9hdGluZyB7CiAgICAgICAgdG9wOiA2MnB4OwogICAgICAgIHotaW5kZXg6IDEyOwogICAgfQoKfQoKLnN0cnVjdHVyZSB7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICB3aWR0aDogMTAwJTsKICAgIGRpc3BsYXk6IGZsZXg7CiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogICAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7CiAgICBtaW4taGVpZ2h0OiAxMDB2aDsKfQoKLmJvZHkgewogICAgZmxleC1ncm93OiAxOwogIAogICAgZGlzcGxheTogZmxleDsKICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgICBhbGlnbi1pdGVtczogc3RyZXRjaDsKfQogIAoubmF2IHsKICAgIGZsZXg6IDAgMDsKICAgIGZsZXgtYmFzaXM6IGF1dG87CiAgICBmbGV4LWJhc2lzOiBjb250ZW50OwogIAogICAgei1pbmRleDogMTA7CgogICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7CiAgICBwYWRkaW5nOiA4cHggMTZweCA3cHg7IC8qIGV4cGVjdCA1cHggbWFyZ2luICovCiAgICBtaW4taGVpZ2h0OiA2MnB4OwogICAgZm9udC1zaXplOiAxNnB4OwogICAgY29sb3I6ICMwMDk2ODg7IC8qIE1hdGVyaWFsIERlc2lnbjogIlRlYWwgNTAwIiAqLwp9CgoubmF2IC50aXRsZSwgLm5hdiAubWVudS1idG4gewogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogICAgdmVydGljYWwtYWxpZ246IHRvcDsKICAgIG1hcmdpbi1sZWZ0OiA3cHg7Cn0KLm5hdiAubWVudS1idG4sIC5uYXYgLnRpdGxlLnBsYWNlaG9sZGVyIHsKICAgIG1hcmdpbi10b3A6IDVweDsKICAgIG1hcmdpbi1sZWZ0OiAwOwp9CgoubmF2ID4gLm1lbnUtYnRuIHsKICAgIGNvbG9yOiAjMzMzOwogICAgY3Vyc29yOiBwb2ludGVyOwogICAgd2lkdGg6IDMycHg7CiAgICBoZWlnaHQ6IDMycHg7CiAgICBib3JkZXItcmFkaXVzOiAxNnB4OwogICAgcGFkZGluZzogNXB4OwogICAgbWFyZ2luLXRvcDogN3B4OwogICAgdGV4dC1hbGlnbjogY2VudGVyOwp9CgoubmF2ID4gLm1lbnUtYnRuOmhvdmVyIHsKICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7Cn0KCi5uYXYtcmlnaHQgewogICAgZmxvYXQ6IHJpZ2h0OwogICAgY29sb3I6ICMzMzM7Cn0KCi5uYXYtZWx0IHsKICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7CiAgICBtYXJnaW4tbGVmdDogMTBweDsKICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKfQoKLm5hdi1lbHQucGxhY2Vob2xkZXIgewogICAgbWFyZ2luLXRvcDogNXB4OwogICAgb3BhY2l0eTogMC44OwogICAgY29sb3I6ICM4ODg7CiAgICB2aXNpYmlsaXR5OiBoaWRkZW47Cn0KCmJvZHkuYW52aWwtaGlnaGxpZ2h0IC5uYXYtZWx0LnBsYWNlaG9sZGVyIHsKICAgIHZpc2liaWxpdHk6IHZpc2libGU7Cn0KCi5uYXYtZWx0IC5kcm9wLWhlcmUgewogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgdG9wOiAwOwogICAgbGVmdDogLTcuNXB4OwogICAgYm90dG9tOiAwOwogICAgd2lkdGg6IDVweDsKfQoKCi5jYXJkcyB7CiAgICBmbGV4LWdyb3c6IDE7CgogICAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgICBjb2xvcjogIzU1NTsKICAgIGZvbnQtc2l6ZTogMjRweDsKCiAgICBwYWRkaW5nOiAyNHB4IDE2cHg7CiAgICBtYXgtd2lkdGg6IDEwMCU7Cn0KCgouZGVzaWduZXIgLmFudmlsLWhpZ2hsaWdodCAuY2FyZHMgLmFudmlsLWNvbnRhaW5lciAuYW52aWwtY29udGFpbmVyIC5hbnZpbC1jb250YWluZXIgewogICAgb3V0bGluZTogMXB4IGRhc2hlZCByZ2JhKDAsMCwwLDAuMykKfQoKCjwvc3R5bGU+CiAgICAgIAo8c2NyaXB0PgpmdW5jdGlvbiB0b2dnbGVTaWRlYmFyKCkgewogICAgdmFyIHMgPSAkKCcuc2lkZWJhcicpOwogICAgaWYgKCFzLmlzKCc6aGlkZGVuJykpIHsKICAgICAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLmhpZGUoKTsKICAgICAgICBzLmFkZENsYXNzKCdmbG9hdGluZycpLmFuaW1hdGUoe2xlZnQ6IC1zLndpZHRoKCl9LCB7Y29tcGxldGU6IGZ1bmN0aW9uKCkgeyBzLmhpZGUoKTsgfX0pOwogICAgfSBlbHNlIHsKICAgICAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLnNob3coKTsKICAgICAgICBzLnNob3coKS5hZGRDbGFzcygnZmxvYXRpbmcnKS5jc3MoJ2xlZnQnLCAnLTEwMCUnKS5jc3MoJ2xlZnQnLCAtcy53aWR0aCgpKQogICAgICAgICAgICAuYW5pbWF0ZSh7bGVmdDogMH0sIHtjb21wbGV0ZTogZnVuY3Rpb24oKSB7IHMucmVtb3ZlQ2xhc3MoJ2Zsb2F0aW5nJyk7IH19KTsKICAgIH0KfQoKJChmdW5jdGlvbigpIHsKICAgICQoJy5zaWRlYmFyJykub24oImNsaWNrIiwgZnVuY3Rpb24oKSB7CiAgICAgICAgaWYgKHdpbmRvdy5pbm5lcldpZHRoIDw9IDc2NykgewogICAgICAgICAgICB0b2dnbGVTaWRlYmFyKCk7CiAgICAgICAgfQogICAgfSk7CiAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLm9uKCJjbGljayIsIHRvZ2dsZVNpZGViYXIpOwp9KQo8L3NjcmlwdD4KCjwhLS0gUHV0IGJvZHkgYmVmb3JlIG5hdiBzbyB0aGF0IGl0IHNpdHMgdW5kZXJuZWF0aCAtLT4KCjxkaXYgY2xhc3M9InN0cnVjdHVyZSI+CgogIDxkaXYgY2xhc3M9Im5hdiIgYW52aWwtZHJvcC1yZWRpcmVjdD0iLnRpdGxlLnBsYWNlaG9sZGVyLCAubmF2LWVsdC5wbGFjZWhvbGRlciwgLm5hdi1lbHQgLmRyb3AtaGVyZSI+CgogICAgPGRpdiBjbGFzcz0ibWVudS1idG4iIG9uY2xpY2s9InRvZ2dsZVNpZGViYXIoKTsiPgogICAgICA8aSBjbGFzcz0iZmEgZmEtYmFycyI+PC9pPgogICAgPC9kaXY+CgogICAgPGRpdiBhbnZpbC1pZi1zbG90LWVtcHR5PSJ0aXRsZSIgYW52aWwtZHJvcC1zbG90PSJ0aXRsZSIgY2xhc3M9InRpdGxlIHBsYWNlaG9sZGVyIGFudmlsLWRlc2lnbmVyLW9ubHkiPgogICAgICBEcm9wIGEgdGl0bGUgaGVyZQogICAgPC9kaXY+CiAgICA8ZGl2IGFudmlsLXNsb3Q9InRpdGxlIiBjbGFzcz0idGl0bGUiPjwvZGl2PgoKICAgIDxkaXYgY2xhc3M9Im5hdi1yaWdodCIgYW52aWwtZHJvcC1yZWRpcmVjdD0iLm5hdi1lbHQiPgogICAgICA8ZGl2IGFudmlsLXNsb3QtcmVwZWF0PSJuYXYtcmlnaHQiIGNsYXNzPSJuYXYtZWx0Ij4KICAgICAgICA8ZGl2IGFudmlsLWRyb3AtaGVyZSBjbGFzcz0iZHJvcC1oZXJlIj48L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9Im5hdi1lbHQgcGxhY2Vob2xkZXIgYW52aWwtZGVzaWduZXItb25seSIgYW52aWwtZHJvcC1zbG90PSJuYXYtcmlnaHQiPgogICAgICAgIDxpIGNsYXNzPSJnbHlwaGljb24gZ2x5cGhpY29uLXBsdXMiPjwvaT4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCjwvZGl2PgogIAo8ZGl2IGNsYXNzPSJib2R5IiBhbnZpbC1kcm9wLWRlZmF1bHQgYW52aWwtZHJvcC1jb250YWluZXI9Ij4uY2FyZHMgLmFudmlsLWNvbnRhaW5lciIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPi5jYXJkcyA+IC5wbGFjZWhvbGRlciI+CiAgICA8ZGl2IGNsYXNzPSJzaWRlYmFyIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+LmRyb3AtaGVyZSI+CiAgICAgICAgPGRpdiBhbnZpbC1zbG90LXJlcGVhdD0ic2lkZWJhciIgY2xhc3M9InNpZGViYXItZWx0Ij4KICAgICAgICAgICAgPGRpdiBhbnZpbC1kcm9wLWhlcmUgY2xhc3M9ImRyb3AtaGVyZSI+PC9kaXY+CiAgICAgICAgICAgIDxkaXYgYW52aWwtc2xvdCBjbGFzcz0iY29udGVudCI+PC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ic2lkZWJhci1lbHQgYW52aWwtZGVzaWduZXItb25seSBkcm9wLWhlcmUiIGFudmlsLWRyb3Atc2xvdD0ic2lkZWJhciI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQgcGxhY2Vob2xkZXIiPjxpIGNsYXNzPSJnbHlwaGljb24gZ2x5cGhpY29uLXBsdXMiPjwvaT48L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0ic2lkZWJhci1jbGljay1ndWFyZCI+PC9kaXY+CgogICAgPGRpdiBjbGFzcz0iY2FyZHMgYW52aWwtbWVhc3VyZS1jb250ZW50Ij4KICAgICAgICA8ZGl2IGFudmlsLWlmLXNsb3QtZW1wdHk9ImRlZmF1bHQiCiAgICAgICAgICAgICBhbnZpbC1kcm9wLXNsb3Q9ImRlZmF1bHQiCiAgICAgICAgICAgICBjbGFzcz0icGxhY2Vob2xkZXIiPgogICAgICAgICAgICAgRHJvcCBhIENvbHVtblBhbmVsIGhlcmUgdG8gYWRkIGNvbnRlbnQKICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBhbnZpbC1zbG90PSJkZWZhdWx0Ij48L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0iYW52aWwtZGVzaWduZXItb25seSBpbnN0cnVjdGlvbnMiPgogICAgICAgICAgICA8aSBjbGFzcz0iZmEgZmEtaW5mby1jaXJjbGUiPjwvaT4gQWRkCiAgICAgICAgICAgIDxpbWcgc3JjPSJodHRwczovL2FudmlsLndvcmtzL3RlbXBsYXRlLWFzc2V0cy9jb2x1bW4tcGFuZWwtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDMwcHg7IG1hcmdpbi1yaWdodDogLTdweDsgbWFyZ2luLXRvcDogLTVweCI+IENhcmQgY29tcG9uZW50cyB0byBjcmVhdGUgbmV3IGNhcmRzLgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CjwvZGl2PgoKPC9kaXY+Cg==,
+    id: EKFR2WEEKR2KDSPIW7QDHHBAX3ZPMTLR}
+  - {name: single-column.html, content: PHN0eWxlPgogIAogIGJvZHksIGh0bWwgewogICAgbWFyZ2luOiAwOwogICAgcGFkZGluZzogMDsKICAgIGZvbnQtZmFtaWx5OiAiSGVsdmV0aWNhIiwiQXJpYWwiLHNhbnMtc2VyaWY7CiAgfQogICAgCiAgaDEsaDIsaDMsaDQsaDUsaDYgewogICAgZm9udC1mYW1pbHk6ICJSb2JvdG8iLCJIZWx2ZXRpY2EiLCJBcmlhbCIsc2Fucy1zZXJpZjsKICB9CgogIGhlYWRlciB7CiAgICBmb250LWZhbWlseTogIlJvYm90byIsIkhlbHZldGljYSIsIkFyaWFsIixzYW5zLXNlcmlmOwogICAgcGFkZGluZzogMHB4IDQwcHg7CiAgICBtaW4taGVpZ2h0OiA2NHB4OwogICAgZGlzcGxheTogZmxleDsKICAgIGZsZXgtd3JhcDogbm93cmFwOwogICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICAgIGJhY2tncm91bmQ6ICNmNWY1ZjU7CiAgfQogIAogIGhlYWRlcj4udGl0bGUgewogICAgZm9udC1zaXplOiAyMHB4OwogIH0KICAKICBoZWFkZXI+Lm5hdi1saW5rcz5zcGFuIHsKICAgIG1hcmdpbjogMCAxMHB4OwogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgdmVydGljYWwtYWxpZ246IHRvcDsKICB9CiAgCiAgLnJpYmJvbiB7CiAgICB3aWR0aDogMTAwJTsKICAgIGhlaWdodDogNDB2aDsKICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDk2ODg7IC8qIzNGNTFCNTsqLwogIH0KICAKICAKICBtYWluIHsKICAgIG1hcmdpbi10b3A6IC0zNXZoOwogICAgZGlzcGxheTogZmxleDsKICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgbWluLWhlaWdodDogY2FsYyg5NXZoIC0gNjRweCk7CiAgfQoKICBib2R5LmFudmlsLXNob3ctYmFubmVyIG1haW4gewogICAgbWluLWhlaWdodDogY2FsYyg5NXZoIC0gNjRweCAtIDUwcHgpOwogIH0KICAKICBtYWluPi5jYXJkcyB7CiAgICB3aWR0aDogY2FsYyg2NyUgLSAxNnB4KTsKICAgIG1heC13aWR0aDogOTYwcHg7CiAgfQogIAogIEBtZWRpYSAobWF4LXdpZHRoOiA4MzlweCkgewogICAgbWFpbj4uY2FyZHMgewogICAgICB3aWR0aDogY2FsYygxMDAlIC0gMTZweCk7CiAgICB9CiAgfQogIAogIG1haW4+Zm9vdGVyIHsKICAgIHdpZHRoOjEwMCU7CiAgICBiYWNrZ3JvdW5kOiAjNDI0MjQyOwogICAgcGFkZGluZzogMzJweCA0MHB4OwogICAgY29sb3I6ICM5ZTllOWU7CiAgICBkaXNwbGF5OiBmbGV4OwogICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICB9CiAgCiAgbWFpbj5mb290ZXIgYSB7CiAgICBjb2xvcjogIzllOWU5ZTsKICB9CiAgCiAgbWFpbj5mb290ZXI+ZGl2PnNwYW4gewogICAgbWFyZ2luOiAwcHggMTBweDsKICB9CiAgCiAgbWFpbj5mb290ZXI+LmZvb3Rlci1saW5rcz5zcGFuIHsKICAgIG1hcmdpbjogMCAxMHB4OwogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgdmVydGljYWwtYWxpZ246IHRvcDsKICB9CiAKICAvKiBHbG9iYWwgb3ZlcnJpZGVzICovCiAgCiAgLmFudmlsLWJzLWNvbnRhaW5lciB7CiAgICBwYWRkaW5nOiAwOwogIH0KICAKICAvKiBEZXNpZ25lciBmaXh1cHMgKi8KICAuZGVzaWduZXIgLnJpYmJvbiB7CiAgICBoZWlnaHQ6IDMwMHB4OwogIH0KICAuZGVzaWduZXIgbWFpbiB7CiAgICBtYXJnaW4tdG9wOiAtMjAwcHg7CiAgICBtaW4taGVpZ2h0OiA1MDBweDsKICB9CiAgCiAgLyogRGVzaWduZXItc3BlY2lmaWMgc3R5bGVzICovCiAgLmxpbmstZHJvcC16b25lIHsKICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICAgIGxlZnQ6IC0xMHB4OwogICAgd2lkdGg6IDVweDsKICAgIGhlaWdodDogNDBweDsKICB9CiAgLm5ldy1saW5rIHsKICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7CiAgICBwYWRkaW5nOiAxMHB4OwogICAgbWFyZ2luLWxlZnQ6IDAgIWltcG9ydGFudDsKICAgIGJvcmRlcjogMXB4IGRvdHRlZCAjYmJiOwogIH0KICBbYW52aWwtaWYtc2xvdC1lbXB0eT10aXRsZV0gewogICAgYm9yZGVyOiAxcHggZG90dGVkICNiYmI7CiAgICBjb2xvcjogIzg4ODsKICAgIHBhZGRpbmc6IDVweDsKICB9CiAgLmRlc2lnbmVyIC5pbnN0cnVjdGlvbnMgewogICAgYmFja2dyb3VuZDogd2hpdGU7CiAgICBtYXJnaW46IDVweDsKICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICAgIHBhZGRpbmc6IDEwcHggMTBweDsKICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgfQogIAo8L3N0eWxlPgoKCjxkaXYgYW52aWwtZHJvcC1kZWZhdWx0IGFudmlsLWRyb3AtY29udGFpbmVyPSI+LmNhcmRzIC5hbnZpbC1jb250YWluZXIiIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ij4uY2FyZHMgPiAucGxhY2Vob2xkZXIiPgogIDxoZWFkZXIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPi5uYXYtbGlua3MgW2FudmlsLWRyb3Atc2xvdF0sPi5uYXYtbGlua3M+c3Bhbj5kaXYubGluay1kcm9wLXpvbmUsPi50aXRsZT5bYW52aWwtZHJvcC1oZXJlXSI+CiAgICA8ZGl2IGNsYXNzPSJ0aXRsZSIgYW52aWwtc2xvdD0idGl0bGUiPgogICAgICA8ZGl2IGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IiBhbnZpbC1pZi1zbG90LWVtcHR5PSJ0aXRsZSIgYW52aWwtZHJvcC1oZXJlPkRyb3AgdGl0bGUgaGVyZTwvZGl2PgogICAgPC9kaXY+CiAgICAKICAgIDxkaXYgY2xhc3M9Im5hdi1saW5rcyIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPnNwYW4+LmxpbmstZHJvcC16b25lLD4uYW52aWwtZGVzaWduZXItb25seSI+CiAgICAgIDxzcGFuIGFudmlsLXNsb3QtcmVwZWF0PSJuYXYtbGlua3MiPgogICAgICAgIDxkaXYgY2xhc3M9ImxpbmstZHJvcC16b25lIiBhbnZpbC1kcm9wLWhlcmU+PC9kaXY+CiAgICAgIDwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9ImFudmlsLWRlc2lnbmVyLW9ubHkgbmV3LWxpbmsiIGFudmlsLWRyb3Atc2xvdD0ibmF2LWxpbmtzIj48aSBjbGFzcz0iZ2x5cGhpY29uIGdseXBoaWNvbi1wbHVzIj48L2k+PC9zcGFuPgogICAgPC9kaXY+CiAgPC9oZWFkZXI+CiAgPGRpdiBjbGFzcz0icmliYm9uIj48L2Rpdj4KICA8bWFpbj4KICAgIDxkaXYgY2xhc3M9ImNhcmRzIj4KICAgICAgCiAgICAgICAgPGRpdiBhbnZpbC1pZi1zbG90LWVtcHR5PSJkZWZhdWx0IgogICAgICAgICAgICAgYW52aWwtZHJvcC1zbG90PSJkZWZhdWx0IgogICAgICAgICAgICAgY2xhc3M9InBsYWNlaG9sZGVyIj4KICAgICAgICAgICAgIERyb3AgYSBDb2x1bW5QYW5lbCBoZXJlIHRvIGFkZCBjb250ZW50CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXYgYW52aWwtc2xvdD0iZGVmYXVsdCI+PC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9InRleHQtY2VudGVyIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImFudmlsLWRlc2lnbmVyLW9ubHkgaW5zdHJ1Y3Rpb25zIj4KICAgICAgICAgICAgICA8aSBjbGFzcz0iZmEgZmEtaW5mby1jaXJjbGUiPjwvaT4gQWRkCiAgICAgICAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vYW52aWwud29ya3MvdGVtcGxhdGUtYXNzZXRzL2NvbHVtbi1wYW5lbC1pY29uLnBuZyIgc3R5bGU9ImhlaWdodDogMzBweDsgbWFyZ2luLXJpZ2h0OiAtN3B4OyBtYXJnaW4tdG9wOiAtNXB4Ij4gQ2FyZCBjb21wb25lbnRzIHRvIGNyZWF0ZSBuZXcgY2FyZHMuCiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgIDwvZGl2PgogICAgPGZvb3RlciBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+LmZvb3Rlci1saW5rcyBbYW52aWwtZHJvcC1zbG90XSw+LmZvb3Rlci1saW5rcz5zcGFuPi5saW5rLWRyb3Atem9uZSI+CiAgICAgIDxkaXYgY2xhc3M9ImZvb3Rlci1saW5rcyIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPnNwYW4+LmxpbmstZHJvcC16b25lLD4uYW52aWwtZGVzaWduZXItb25seSI+CiAgICAgICAgPHNwYW4gYW52aWwtc2xvdC1yZXBlYXQ9ImZvb3Rlci1saW5rcy1sZWZ0Ij4KICAgICAgICAgIDxkaXYgY2xhc3M9ImxpbmstZHJvcC16b25lIiBhbnZpbC1kcm9wLWhlcmU+PC9kaXY+CiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IG5ldy1saW5rIiBhbnZpbC1kcm9wLXNsb3Q9ImZvb3Rlci1saW5rcy1sZWZ0Ij48aSBjbGFzcz0iZ2x5cGhpY29uIGdseXBoaWNvbi1wbHVzIj48L2k+PC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iZm9vdGVyLWxpbmtzIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+c3Bhbj4ubGluay1kcm9wLXpvbmUsPi5hbnZpbC1kZXNpZ25lci1vbmx5Ij4KICAgICAgICA8c3BhbiBhbnZpbC1zbG90LXJlcGVhdD0iZm9vdGVyLWxpbmtzLXJpZ2h0Ij4KICAgICAgICAgIDxkaXYgY2xhc3M9ImxpbmstZHJvcC16b25lIiBhbnZpbC1kcm9wLWhlcmU+PC9kaXY+CiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IG5ldy1saW5rIiBhbnZpbC1kcm9wLXNsb3Q9ImZvb3Rlci1saW5rcy1yaWdodCI+PGkgY2xhc3M9ImdseXBoaWNvbiBnbHlwaGljb24tcGx1cyI+PC9pPjwvc3Bhbj4KICAgICAgPC9kaXY+CiAgICA8L2Zvb3Rlcj4KICA8L21haW4+CjwvZGl2Pgo=,
+    id: THBVYGXLXUG563LIFGFWIP4KQ7BQ47NY}
+  - {name: theme.css, content: Ym9keSAqIHsKICBib3gtc2l6aW5nOiBib3JkZXItYm94Owp9Cgpib2R5IHsKICBmb250LWZhbWlseTogIlJvYm90byI7CiAgbWFyZ2luOiAwOwogIG1pbi1oZWlnaHQ6IDEwMCU7Cn0KCmJvZHkuYW52aWwtc2hvdy1iYW5uZXIgI2FwcEdvZXNIZXJlIHsKICAgIG1hcmdpbi10b3A6IDUwcHg7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KCi5ib2R5IHsKICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDdkN2Q3Owp9CgphLCBhOnZpc2l0ZWQgewogIGNvbG9yOiAjMDA5Njg4Owp9CgphOmhvdmVyLCBhOmFjdGl2ZSwgYTpmb2N1cyB7CiAgY29sb3I6ICMwMDc5NkI7IC8qIE1hdGVyaWFsIGRlc2lnbjogVGVhbCA3MDAgKi8KfQoKLnBsYWNlaG9sZGVyIHsKICBwYWRkaW5nOiA1cHg7CiAgYm9yZGVyOiAycHggZGFzaGVkICM4ODg7Cn0KCi5uYXYgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDA7CiAgbGVmdDogMDsKICB3aWR0aDogMTAwJTsKCiAgb3ZlcmZsb3cteTogaGlkZGVuOwoKICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogIGZvbnQtd2VpZ2h0OiBib2xkOwoKICBib3gtc2hhZG93OiAwIDFweCAzcHggIzg4ODsKCgogIC13ZWJraXQtdG91Y2gtY2FsbG91dDogbm9uZTsKICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOwogIC1raHRtbC11c2VyLXNlbGVjdDogbm9uZTsKICAtbW96LXVzZXItc2VsZWN0OiBub25lOwogIC1tcy11c2VyLXNlbGVjdDogbm9uZTsKICB1c2VyLXNlbGVjdDogbm9uZTsKfQoKLm5hdi1yaWdodCB7CiAgZmxvYXQ6IHJpZ2h0OwogIGNvbG9yOiAjMzMzOwp9CgoubmF2LWVsdCB7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogIHZlcnRpY2FsLWFsaWduOiB0b3A7CiAgbWFyZ2luLWxlZnQ6IDEwcHg7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9CgoubmF2LWVsdC5wbGFjZWhvbGRlciB7CiAgbWFyZ2luLXRvcDogNXB4OwogIG9wYWNpdHk6IDAuODsKICBjb2xvcjogIzg4ODsKICB2aXNpYmlsaXR5OiBoaWRkZW47Cn0KCmJvZHkuYW52aWwtaGlnaGxpZ2h0IC5uYXYtZWx0LnBsYWNlaG9sZGVyIHsKICB2aXNpYmlsaXR5OiB2aXNpYmxlOwp9CgoubmF2LWVsdCAuZHJvcC1oZXJlIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgdG9wOiAwOwogIGxlZnQ6IC03LjVweDsKICBib3R0b206IDA7CiAgd2lkdGg6IDVweDsKfQoKLmFudmlsLXJvbGUtdGl0bGUgewogIGZvbnQtc2l6ZTogMTZweDsKICBmb250LXdlaWdodDogYm9sZDsKfQoKLmRlc2lnbmVyIC5pbnN0cnVjdGlvbnMgewogICAgcGFkZGluZzogMjRweCAxNnB4OwogICAgZm9udC1zaXplOiAxNHB4OwogICAgdGV4dC1hbGlnbjogY2VudGVyOwogICAgY29sb3I6ICM2NjY7Cn0KCi8qIEdpdmUgZW5vdWdoIHNwYWNlIGZvciBjYXJkIGRyb3Atc2hhZG93cyAqLwouY2FyZHMgPiBkaXYgPiAuY29sdW1uLXBhbmVsID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgewogICAgcGFkZGluZzogMCA1cHg7Cn0KCi5jYXJkcyA+IC5hbnZpbC1jb250YWluZXIgewogICAgb3V0bGluZTogbm9uZSAhaW1wb3J0YW50Owp9CgouYW52aWwtcm9sZS1jYXJkLAouZGVzaWduZXIgLmFudmlsLWhpZ2hsaWdodCAuYW52aWwtcm9sZS1jYXJkIHsKICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlOwogICAgYm94LXNoYWRvdzogMXB4IDJweCA0cHggIzg4ODsKCiAgICBmb250LXdlaWdodDogbm9ybWFsOwogICAgZm9udC1zaXplOiAxNHB4OwoKICAgIG91dGxpbmU6IG5vbmU7CiAgICBwYWRkaW5nOiAxNXB4IDA7Cgp9CiAgCi5hbnZpbC1yb2xlLWNhcmQ+LmFudmlsLXBhbmVsLXNlY3Rpb24+LmFudmlsLXBhbmVsLXNlY3Rpb24tY29udGFpbmVyIHsKICAgIHBhZGRpbmc6IDAgMTVweDsKfQoKLyogUmVzcG9uc2l2ZSBiaXRzOiBNYWtlIHRoZSBtZW51IG92ZXJsYXkgdGhlIHNjcmVlbgogICAoYW5kIGhpZGRlbiBieSBkZWZhdWx0KSByYXRoZXIgdGhhbiBkaXNwbGFjaW5nIGl0CiAgIG9uIHNtYWxsIHNjcmVlbnMKKi8KCkBtZWRpYShtYXgtd2lkdGg6NzY3cHgpIHsKCiAgLmNhcmRzIHsKICAgIHBhZGRpbmc6IDI0cHggMHB4OwogIH0KCn0KCgovKiBGcm9tIGh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG8gKi8KLyogY3lyaWxsaWMtZXh0ICovCkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi9lazRnelotR2VYQVBjU2JIdENlUUlfZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7CiAgdW5pY29kZS1yYW5nZTogVSswNDYwLTA1MkYsIFUrMjBCNCwgVSsyREUwLTJERkYsIFUrQTY0MC1BNjlGOwp9Ci8qIGN5cmlsbGljICovCkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi9tRXJ2TEJZZ19jWEczckx2VXNLVF9mZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7CiAgdW5pY29kZS1yYW5nZTogVSswNDAwLTA0NUYsIFUrMDQ5MC0wNDkxLCBVKzA0QjAtMDRCMSwgVSsyMTE2Owp9Ci8qIGdyZWVrLWV4dCAqLwpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvLTJuMnAtX1kwOHNnNTdDTldRZktOdmVzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOwogIHVuaWNvZGUtcmFuZ2U6IFUrMUYwMC0xRkZGOwp9Ci8qIGdyZWVrICovCkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi91MFRPcG0wODJNTmtTNUswUTRyaHF2ZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7CiAgdW5pY29kZS1yYW5nZTogVSswMzcwLTAzRkY7Cn0KLyogdmlldG5hbWVzZSAqLwpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvTmRGOU10bk9wTHpvLW5vTW9HMG1pUGVzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOwogIHVuaWNvZGUtcmFuZ2U6IFUrMDEwMi0wMTAzLCBVKzFFQTAtMUVGOSwgVSsyMEFCOwp9Ci8qIGxhdGluLWV4dCAqLwpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvRmN4N1d3djhPelQ3MUEzRTFYT0FqdmVzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOwogIHVuaWNvZGUtcmFuZ2U6IFUrMDEwMC0wMjRGLCBVKzFFMDAtMUVGRiwgVSsyMEEwLTIwQUIsIFUrMjBBRC0yMENGLCBVKzJDNjAtMkM3RiwgVStBNzIwLUE3RkY7Cn0KLyogbGF0aW4gKi8KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogbG9jYWwoJ1JvYm90bycpLCBsb2NhbCgnUm9ib3RvLVJlZ3VsYXInKSwgdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjE2L0NXQjBYWUE4YnpvMGtTVGhYMFVUdUEud29mZjIpIGZvcm1hdCgnd29mZjInKTsKICB1bmljb2RlLXJhbmdlOiBVKzAwMDAtMDBGRiwgVSswMTMxLCBVKzAxNTItMDE1MywgVSswMkM2LCBVKzAyREEsIFUrMDJEQywgVSsyMDAwLTIwNkYsIFUrMjA3NCwgVSsyMEFDLCBVKzIyMTIsIFUrMjIxNTsKfQ==,
+    id: XRMCH3HGLSNT6Q2LDIRY7QBPUQH3SYCC}
+server_modules:
+- {name: ServerModule1, code: "import anvil.tables as tables\nimport anvil.tables.query\
+    \ as q\nfrom anvil.tables import app_tables\nimport anvil.server\nimport sys\n\
+    import anvil.media\nimport random\n\n\n# This is a server module. It runs on the\
+    \ Anvil server,\n# rather than in the user's browser.\n#\n# To allow anvil.server.call()\
+    \ to call functions here, we mark\n# them with @anvil.server.callable.\n# Here\
+    \ is an example - you can replace it with your own:\n#\n# @anvil.server.callable\n\
+    # def say_hello(name):\n#   print(\"Hello, \" + name + \"!\")\n#   return 42\n\
+    #\n\n\n\ndef online() :\n  return True\n\n\n\n#########################################################################\n\
+    # Estrutura para realizar o treinamento em background como API:\n# Deste jeito\
+    \ funcionou sem erro. Foi utilizado apenas para testes e\n# eu mantive aqui para\
+    \ fins did\xe1ticos.\n##########################################################################======>\
+    \ TREINAR O MODELO \n@anvil.server.background_task\ndef train_model(csv_filename):\n\
+    \  try:\n#    response = anvil.server.call('train_model', csv_filename, 5)\n \
+    \   response = anvil.server.call('thread_train_model', csv_filename, 5)\n    if\
+    \ response:\n      return response\n  except:\n      return []\n\n#@anvil.server.http_endpoint('/train_model/:csv_filename')\n\
+    def launch_train_model_task(csv_filename):\n  task = anvil.server.launch_background_task('train_model',\
+    \ csv_filename)\n  if task:\n    return ['Treino Inicializado', task.get_id()]\n\
+    \  else:\n    return ['Falha ao inicializar treinamento']\n#\n# FIM DO TREINAMENTO\
+    \ EM BACKGROUND\n########################################################################\n\
+    \n\n\n##########################################################################======>\
+    \ DOWNLOAD DO ARQUIVO\n#@anvil.server.http_endpoint('/api_download_csv/:file_name',\
+    \ enable_cors=True)\n#def api_download_csv(file_name):\n#  return ['OK']\n\n\n\
+    ##########################################################################======>\
+    \ API PARA SETAR TREINAMENTO INICIADO\n@anvil.server.http_endpoint('/api_treinamento_iniciado/:model_name',\
+    \ enable_cors=True)\ndef api_treinamento_iniciado(model_name):\n#  csv_filename=model_name\n\
+    \n    try:\n      row = app_tables.suggeri_table.get(Chave=model_name)\n     \
+    \ row['Estado'] = 'Treinamento iniciado'\n    except anvil.server.AnvilWrappedError\
+    \ as exc:\n      return [exc.message]\n\n    return ['OK']\n\n##########################################################################======>\
+    \ API SETAR TREINAMENTO FINALIZADO\n@anvil.server.http_endpoint('/api_treinamento_finalizado/:model_name',\
+    \ enable_cors=True)\ndef api_treinamento_finalizado(model_name):\n  # DEVE GRAVAR\
+    \ NO BD QUE O TREINAMENTO FINALIZOU\n    try:\n      row = app_tables.suggeri_table.get(Chave=model_name)\n\
+    \      row['Estado'] = 'Treinamento finalizado'\n    except anvil.server.AnvilWrappedError\
+    \ as exc:\n      return [exc.message]\n\n    return ['OK']\n\n\n##########################################################################======>\
+    \ API PARA FAZER A PREDI\xc7\xc3O DE NOTAS PARA UM ITEM\n#@anvil.server.http_endpoint('/api_predict_item/:model_name/:item_id/:n',\
+    \ enable_cors=True)\n#def api_predict_item(model_name, item_id, n=5):\n  \n# \
+    \ return [ 150, 210, 98, 45, 301]\n#  try:\n#    result = anvil.server.call('predict_item',\
+    \ model_name, item_id, n)\n#    if result:\n#      return result\n#  except:\n\
+    #      return ['NOK']\n    \n\n    \n##########################################################################======>\
+    \ API PARA FAZER A PREDI\xc7\xc3O DE ITENS PARA O MODELO/USUARIO\n#@anvil.server.http_endpoint('/api_predict_user/:model_name/:user_id/:n',\
+    \ enable_cors=True)\n#def api_predict_user(model_name, user_id, n=5):\n  \n# \
+    \ return [ 5544879, 3447342, 9789150, 144785, 2117957]\n#  try:\n#    products\
+    \ = anvil.server.call('predict_user', model_name, user_id, n)\n#    if products:\n\
+    #      return products\n#  except:\n#      return ['NOK']    \n    \n##########################################################################======>\
+    \ API PARA FAZER A PREDI\xc7\xc3O DE NOTA DE UM ITEM PARA O MODELO/USUARIO\n#@anvil.server.http_endpoint('/api_predict_user_item/:model_name/:user_id/:item_id',\
+    \ enable_cors=True)\n#def api_predict_user_item(model_name, user_id, item_id):\n\
+    \  \n#  return [ 4.54 ]\n  \n#  try:\n#    result = anvil.server.call('predict_user_item',\
+    \ model_name, user_id, item_id)\n#    if result:\n#      return result\n#  except:\n\
+    #      return ['NOK']\n  \n\n# criar thread para fazer o treinamento em background/assincrono\
+    \ diretamente no colab. Antes de come\xe7ar o\n# treinamento, gerar e retornar\
+    \ o id do modelo. Depois de treinado, acionar o servidor anvil do front para marcar\n\
+    # que o treinamento terminou.\n\n\n# usar http end point\t\t\n# colab recebe,\
+    \ cria thread e responbde que est\xe1 processando,\n# quando terminar, aciona\
+    \ um http_endpoint no anvil para informar que terminou\n# criar user case diagram\
+    \ das situacoes que v\xe3o ocorrer\n\n\n\n###########################################################################################################\n\
+    ###########################################################################################################\n\
+    ###########################################################################################################\n\
+    #  API CONFORME ESPECIFICADO NO ESQUELETO APIFRONTENDCOLAB\n###########################################################################################################\n\
+    ###########################################################################################################\n\
+    ###########################################################################################################\n\
+    \n\n@anvil.server.http_endpoint('/download_csv/', enable_cors=True)\ndef api_download_csv(csv_filename):\n\
+    \  csv_content = 'conteudo do arquivo csv do cliente 1'\n  return csv_content\n\
+    \n# https://anvil.works/forum/t/downloading-csv-doesnt-show-filename/1172\n\n\
+    @anvil.server.http_endpoint('/treinamento_iniciado/', enable_cors=True)\ndef api_treinamento_iniciado(model_name):\n\
+    \  # salva no banco que este modelo esta com o treinamento iniciado\n  # busca\
+    \ no banco o modelo, atualiza para \"Treinamento Iniciado\"\n  print(f'salvando\
+    \ modelo {model_name} como iniciado no banco de dados')\n  global status_modelo_cliente_1\n\
+    \  status_modelo_cliente_1 = \"Treinamento Iniciado\"\n\n@anvil.server.http_endpoint('/treinamento_finalizado/',\
+    \ enable_cors=True)\ndef api_treinamento_finalizado(model_name):\n  # salva no\
+    \ banco que este modelo esta treinado\n  # busca no banco o modelo, atualiza para\
+    \ \"Treinado\"\n  print(f'salvando modelo {model_name} como treinado no banco\
+    \ de dados')\n  global status_modelo_cliente_1\n  status_modelo_cliente_1 = \"\
+    Treinado\"\n\n  \n##########################################################################======>\
+    \ API PARA INICIAR O TREINAMENTO DO MODELO    \n@anvil.server.http_endpoint('/train_model/:csv_filename',\
+    \ enable_cors=True)\ndef API_train_model(csv_filename):\n  \n  if (online()):\n\
+    \    try:\n      result = anvil.server.call('servercall_treinar_modelo', csv_filename)\n\
+    \      if result:\n        return result\n    except anvil.server.AnvilWrappedError\
+    \ as exc:\n        return [exc.message]   \n  else:\n    return ['Treinamento\
+    \ Iniciado']\n      \n\n##########################################################################======>\
+    \  API PARA FAZER A PREDI\xc7\xc3O DE ITENS PARA UM USUARIO         \n@anvil.server.callable\n\
+    @anvil.server.http_endpoint('/predict_item/:model_name/:user_id', enable_cors=True)\n\
+    def api_predict_item(model_name, user_id, n=5):\n  \n  if (online()):\n  # chama\
+    \ o colab via servercall para realizar a predicao\n    try:\n      result = anvil.server.call('predict_item',\
+    \ model_name, user_id, n)\n      if result:\n        return result\n    except\
+    \ anvil.server.AnvilWrappedError as exc:\n        return [exc.message]     \n\
+    \  else:\n    randomlist = random.sample(range(10, 3000), 5)\n    print(randomlist)\n\
+    \    return randomlist\n  #[\"98\",\"64\",\"408\",\"318\",\"483\"]\n\n##########################################################################======>\
+    \ API PARA FAZER A PREDI\xc7\xc3O DE NOTA DE UM ITEM PARA O MODELO/USUARIO\n@anvil.server.callable\n\
+    @anvil.server.http_endpoint('/predict_user_item/:model_name/:user_id/:item_id',\
+    \ enable_cors=True)\ndef api_predict_user_item(model_name, user_id, item_id):\n\
+    \  \n  if (online()):\n    try:\n      result = anvil.server.call('predict_user_item',\
+    \ model_name, user_id, item_id)\n      if result:\n        return result\n   \
+    \ except anvil.server.AnvilWrappedError as exc:\n          return [exc.message]\
+    \       \n  else:\n    return [random.random()*5]  #[3.1937090501094283]    \n\
+    \n##########################################################################======>\
+    \ API PARA FAZER A PREDI\xc7\xc3O DE USUARIOS PARA UM ITEM DO MODELO    \n@anvil.server.callable\n\
+    @anvil.server.http_endpoint('/predict_user/:model_name/:item_id', enable_cors=True)\n\
+    def API_predict_users(model_name, item_id):\n  if (online()):\n    try:\n    \
+    \  result = anvil.server.call('predict_users', model_name, item_id)\n      if\
+    \ result:\n        return result\n    except anvil.server.AnvilWrappedError as\
+    \ exc:\n      return [exc.message]     \n  else:\n    randomlist = random.sample(range(1000,\
+    \ 30000), 5)\n    print(randomlist)\n    return randomlist    \n      #return\
+    \ [\"507\",\"688\",\"810\",\"427\",\"907\"]    \n    \n    \n#####################################################################################\
+    \ ARQUIVOS\nmy_media = anvil.URLMedia(\"https://anvil.works/ide/img/banner-100.png\"\
+    )\n\n@anvil.server.http_endpoint('/arquivo')\ndef write_a_media_object():\n  media_object\
+    \ = anvil.BlobMedia('text/plain', b'Hello, world', name='hello_world.txt')\n \
+    \ my_media = anvil.URLMedia(\"https://anvil.works/ide/img/banner-100.png\")\n\
+    \  f = open(\"myfile.txt\", \"w\")\n  \n  #with open('/tmp/hello_world.txt', 'wb+')\
+    \ as f:\n    # Write the byte contents of the media object to 'tmp/my-file.txt'\n\
+    \    # (we opened the file in binary mode, so f.write() accepts bytes)\n  #  f.write(media_object.get_bytes())\n\
+    \  return 'ok'\ndef read_a_file():\n  with open('/tmp/hello_world.txt', 'r') as\
+    \ f:\n    contents = f.read()\n    print(contents)\n    \n    \n##################################\
+    \ funcoes chamadas pelo client\n\ndef get_uuid():\n  return anvil.server.call('get_uuid')\n\
+    \n\n# essa funcao \xe9 acionada pelo client/frontend para enviar o arquivo para\n\
+    # o colab e acionar o treinamento automaticamente.\n# recebe como retorno o id\
+    \ do modelo\ndef get_data(file, modelo_id):\n  # falta ler o id do modelo e gravar\
+    \ na tabela o nome do modelo, com status em treinamento\n  return anvil.server.call('get_data',\
+    \ file, modelo_id)\n\n#def training_model():\n  ", id: U534TJOCHNBJF6EN4KLFDJ4KMY5LQ6K4}
+renamed: true

@@ -1,92 +1,65 @@
-# DSA Mentoria - Turma 2
+# Suggeri
 
-Projeto da Turma 2 da Mentoria do Programa DataScienceAcademy.
+Suggeri é um sistema de recomendação como serviço usando inteligência artificial.
+
+Você recomenda produtos para seus clientes no seu site/e-commerce? Então a Suggeri é pra você!! Estamos trazendo uma ferramenta inteligente de recomendação de produto com base no que realmente os seus consumidores compram para que você possa vender muito mais!
+
+Diga adeus às recomendações genéricas e segmentação teórica. No nosso sistema, você simplesmente carrega uma base de dados das vendas reais de sua própria empresa e automaticamente treinamos um modelo de Machine Learning especial para sua empresa.
+
+Assista ao vídeo abaixo para saber mais e confira todos os detalhes no site http://www.suggeri.com.br/.
+
+
+## Vídeo Explicativo
+
+[![Vídeo Explicativo](https://img.youtube.com/vi/ISAjxbkh82M/0.jpg)](https://www.youtube.com/watch?v=ISAjxbkh82M)
+
+Clique na imagem acima ou acesse o link https://www.youtube.com/watch?v=ISAjxbkh82M
+
+
+## Infra-estrutura:
+
+Temos uma infra-estrutura completa na nuvem para garantir o melhor serviço a qualquer momento.
+
+![Diagrama da Infra-estrutura](./images/diagrama_solucao.png)
+
+Como estamos estruturados:
+- [Site do Suggeri](http://www.suggeri.com.br/), explicando o funcionamento e preços;
+- [Documentação da API](http://www.suggeri.com.br/api.html), com todos os detalhes de como acessar o serviço;
+- [Site Administrativo](https://suggeri.anvil.app/) para receber as empresas e suas bases de dados;
+- API para receber as chamadas dos sites dos clientes;
+- Servidor na nuvem escalável para treino automático de modelos a partir das bases.
+
+
+## Experimente
+
+Veja em tempo real o sistema de recomendação funcionando em nosso site na aba [Experimente](http://www.suggeri.com.br/#m-experimente).
+
+
+## Tutorial
+
+Baixe o [dataset de exemplo](./data/dataset_test.csv) e siga o passo a passo do nosso [Tutorial](http://www.suggeri.com.br/tutorial.html) para experimentar agora mesmo a melhor ferramenta de recomendação de produto do mercado.
+
+
+## DSA Mentoria - Turma 2
+
+A Suggeri é uma startup criada como parte do Projeto da Turma 2 da Mentoria do Programa DataScienceAcademy.
+
+O [Sumário Executivo](./desenvolvimento/sumario_executivo.md) do projeto contém um resumo do projeto, as ferramentas utilizadas, lições aprendidadas e links importantes.
 
 Mais detalhes do programa no [Regulamento](https://blog.dsacademy.com.br/programa-de-mentoria-entre-os-alunos-dsa-temporada-2021/).
 
-## Plano de Trabalho
 
-Atividades previstas:
-- [X] Escolha de 1 projeto para trabalho
-- [X] Divisão entre os participantes
-- [ ] Reuniões semanais de alinhamento
-- [ ] 1 Sessão Técnica para cada participante
-- [ ] Colocar em Produção na Nuvem ou Servidor local
-- [ ] Publicação no Github e DSA
+## Behind the hood
 
-## Sessões
+Saiba todos os detalhes de como foi desenvolvido e como executar neste [link](./desenvolvimento).
 
-As sessões mensais serão online e com a seguinte frequência:
-- 1 a 2 com o grupo todo
-- 1 a 2 com cada mentorado para dúvidas dos *homeworks*
 
-Cada mentorado deverá apresentar um tema para o grupo, observando:
-- tema relevante ao projeto
-- todos do grupo devem participar
-- os outros membros devem dar feedback
-  - o que foi bom?
-  - o que pode melhorar?
-  - foi prolixo? conciso?
-  - como foi a técnica de apresentação?
+## Equipe
 
-As sessões podem ser acompanhadas na [Lista de Sessões](./SESSOES.md).
+![](./images/team.png)
 
-## Ritmo do Trabalho
+Conheça um pouco mais da equipe que trabalha duro todos os dias para garantir a melhor experiência para a sua empresa.
 
-O ritmo de trabalho esperado será de acordo com a disponibilidade exigida para entrar no programa:
-- 30 minutos por dia / 2h30m por semana
-- trabalhar nas tarefas
-- reportar constantemente ao mentor o andamento de suas tarefas
-- a conclusão do projeto exige bastante esforço individual e do grupo
-
-## Mentoria
-
-Atividades da mentoria incluem:
-- compreender os pontos fortes e dificuldades dos mentorados
-- gerenciar ou designar um mentorando como GP
-- trabalhar a parte mais técnica, quando sobrar tempo
-- divisão das tarefas entre mentorados
-- resolução de conflitos
-
-## Projeto
-
-Sobre o Projeto e sua avaliação:
-- um único projeto completo para o grupo
-- tema decidido em consenso
-- tema definido até 2/7
-- usar ferramentas gratuitas
-- termo de compromisso para o compartilhamento do projeto assinado por todos por e-mail
-- dados devem ser públicos (termo de uso dos dados de empresas)
-- sumário Executivo do Projeto
-- não compartilhar na comunidade antes do fim do prazo
-- deve conter o detalhamento do Projeto
-- deve ter o projeto final enviado para Análise da DSA na 1ª semana de outubro
-- projeto será entregue pelo Mentor com link no Github
-- os 3 melhores projetos serão compartilhados aos demais alunos da DSA, com autorização do grupo
-- os melhores projetos serão apresentados para empresas
-- certificado de conclusão do curso para quem finalizar o projeto
-
-Exemplos de projetos para servir de inspiração:
-- Sistema de Recomendação de Solução CRM
-- Modelo Preditivo de Vendas por Região
-- App Web de classificação de Imagens de Satélite
-- Solução de Coleta e Armazenamento de Dados de Sensores
-- Análise tem Tempo Real da Efetividade de Campanhas de Marketing de Redes Sociais
-- Chatbot de Atendimento ao Cliente e Geração Automática de Registro de Pedidos
-- Arquitetura de Solução de Dados (Teórico)
-- Plano de Custo de Solução de Análise de Dados (Teórico)
-- Dashboard Analítico - PowerBI/Tableau
-
-## Avaliação do Programa
-
-O mentor irá avaliar os mentorados e vice-versa, assim como todos devem avaliar o programa.
- 
-## Objetivo do Projeto
- 
-Suggeri - Sistema de Recomendação como Serviço com base em Inteligência Artificial.
- 
-## Participantes
- 
 Mentoria:
  - [Ronivaldo Sampaio](https://github.com/ronivaldo/)
 
@@ -95,7 +68,3 @@ Mentorados:
 - [Danielle Pequito](https://github.com/danipequito)
 - [Érica Xavier](https://github.com/ericaxv)
 - [Geziel Campos](https://github.com/gezielmc)
-
-## Pull Requests
-
-Para contribuir com este repositório, siga as instruções em [How to Create Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
